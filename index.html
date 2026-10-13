@@ -119,6 +119,17 @@ section{padding-block:88px}
 .care ul{margin:16px 0 0; padding-left:20px; color:var(--muted); display:grid; gap:6px}
 .care .free{margin-top:16px; font-weight:600}
 
+/* tiers */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.tier{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:26px;display:flex;flex-direction:column;min-width:0}
+.tier.hot{border:2px solid var(--pen);box-shadow:0 18px 40px -26px rgba(36,66,201,.6)}
+.tier .tp{font:800 46px/1 var(--display);letter-spacing:-.02em;margin:14px 0 8px}
+.tier .tp s{font:500 20px var(--body);color:var(--muted);margin-left:10px}
+.tier .tp small{font-size:26px}
+.tier p{color:var(--muted)}
+.tier ul{margin:16px 0 20px;padding-left:20px;display:grid;gap:6px;flex:1;align-content:start}
+.tier .dep{font:500 13px/1.4 var(--mono);color:var(--pen)}
+@media (max-width:880px){.tiers{grid-template-columns:1fr}}
 /* about */
 .about{display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:start; max-width:860px}
 .mono{width:120px; height:120px; border-radius:50%; background:var(--pen); color:var(--pen-ink); display:grid; place-items:center; font:800 46px/1 var(--display); letter-spacing:-.04em}
@@ -174,7 +185,7 @@ footer{padding-block:28px; font-size:14px; color:var(--muted); display:flex; jus
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top">Cole Ormont<span>.</span></a>
-    <a class="btn" href="#start">Free preview</a>
+    <div style="display:flex;gap:8px"><a class="btn line" href="tel:+15088077554">Call</a><a class="btn" href="#start">Free preview</a></div>
   </div>
 </header>
 
@@ -188,7 +199,7 @@ footer{padding-block:28px; font-size:14px; color:var(--muted); display:flex; jus
         <a class="btn" href="#start">Get my free preview</a>
         <a class="btn line" href="#price">See the price</a>
       </div>
-      <p class="fine">$750 one time. Nothing to pay until you've seen your preview and want it.</p>
+      <p class="fine">Sites from $399, one time. Nothing to pay until you've seen your preview and want it.</p>
     </div>
 
     <div class="listing" id="listing" aria-label="Example Google listing">
@@ -249,28 +260,19 @@ footer{padding-block:28px; font-size:14px; color:var(--muted); display:flex; jus
 <main class="wrap">
   <section id="price">
     <div class="head">
-      <div><div class="label">Price</div><h2 style="margin-top:14px">One price. Written down.</h2></div>
-      <p>No hourly billing and no surprise invoices. This is what a full site costs, everything included.</p>
+      <div><div class="label">Price</div><h2 style="margin-top:14px">Three options. Written down.</h2></div>
+      <p>No hourly billing and no surprise invoices. Half to start once you love the preview, half when it goes live.</p>
     </div>
-    <div class="est">
-      <div class="slip">
-        <div class="row1"><span class="label">Estimate · Full website</span><span class="label">Valid for any small business</span></div>
-        <table>
-          <tbody>
-            <tr><td>Custom design for your business<small>Not a template. Built around what you do.</small></td><td>Included</td></tr>
-            <tr><td>Mobile first<small>Looks right on every phone, where most of your customers are.</small></td><td>Included</td></tr>
-            <tr><td>Call button and quote form<small>Requests come straight to your phone or email.</small></td><td>Included</td></tr>
-            <tr><td>Your reviews, photos and service area</td><td>Included</td></tr>
-            <tr><td>Domain set up in your name<small>You own it. About $12 a year, paid to the registrar.</small></td><td>Included</td></tr>
-            <tr><td>Two rounds of changes</td><td>Included</td></tr>
-          </tbody>
-          <tfoot><tr><td><span class="label">Total</span></td><td><span class="total">$750</span></td></tr></tfoot>
-        </table>
-        <div class="split">
-          <span><b>$375</b>to start, once you love the preview</span>
-          <span><b>$375</b>when your site goes live</span>
-        </div>
-      </div>
+    <div class="tiers">
+      <div class="tier"><div class="label">Starter</div><div class="tp">$399</div><p>A sharp one-page site like your preview.</p>
+        <ul><li>Mobile-first design</li><li>Call button and quote form</li><li>Your reviews and service area</li><li>One round of changes</li></ul><span class="dep">$199 to start</span></div>
+      <div class="tier hot"><div class="label">Standard · most popular</div><div class="tp">$650<s>$750</s></div><p>The full site, built around your work.</p>
+        <ul><li>Everything in Starter</li><li>Your photos and a project gallery</li><li>Connected to your Google listing</li><li>Two rounds of changes</li></ul><span class="dep">$325 to start · launch price</span></div>
+      <div class="tier"><div class="label">Pro</div><div class="tp">$850<small>+</small></div><p>For businesses ready to book online.</p>
+        <ul><li>Everything in Standard</li><li>Online booking</li><li>Deposits at booking (+$100)</li><li>Pages for each town you serve ($25/town)</li></ul><span class="dep">Half to start</span></div>
+    </div>
+    <p class="fine" style="margin-top:16px;color:var(--muted)">Domain registered in your name, about $12 a year to the registrar. You own the site either way.</p>
+    <div class="est" style="margin-top:28px;grid-template-columns:1fr">
       <aside class="care">
         <div class="label">Optional</div>
         <h3 style="margin-top:12px">Care plan</h3>
@@ -281,7 +283,7 @@ footer{padding-block:28px; font-size:14px; color:var(--muted); display:flex; jus
           <li>Seasonal updates and promos</li>
           <li>Cancel any time with 30 days' notice</li>
         </ul>
-        <p class="free">First month free. Skip it and I'll hand everything over to you.</p>
+        <p class="free">Totally optional. Skip it and I'll hand everything over to you.</p>
       </aside>
     </div>
   </section>
@@ -306,6 +308,7 @@ footer{padding-block:28px; font-size:14px; color:var(--muted); display:flex; jus
       <details><summary>Do I own the website?</summary><p>Yes. The domain is registered in your name, and the site is yours whether or not you keep the care plan.</p></details>
       <details><summary>What do you need from me?</summary><p>Ten minutes to tell me about your business, plus any photos of you, your truck or your work. Phone photos are fine.</p></details>
       <details><summary>How long does it take?</summary><p>Your preview is ready in about 48 hours. Once you send photos and changes, your site is usually live within a week.</p></details>
+      <details><summary>Do you use AI?</summary><p>Yes, I use AI tools to move fast, which is how I can build you a free preview first. But I design it around your business, set up your domain and Google listing, and make every change you ask for. You're dealing with me, not a robot.</p></details>
       <details><summary>I'm not local to Massachusetts. Can you still build mine?</summary><p>Yes. Everything happens over text and a quick call, and you see each version before it goes live.</p></details>
     </div>
   </section>
