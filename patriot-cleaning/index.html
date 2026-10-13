@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Patriot Cleaning · House cleaning in Clarksville</title>
-<meta name="description" content="Patriot Cleaning cleans homes in Clarksville, TN. Spend your time on what matters and come back to a fresh, tidy house.">
+<meta name="referrer" content="no-referrer">
+<title>Patriot Cleaning · Carpet cleaning in Clarksville</title>
+<meta name="description" content="Patriot Cleaning deep cleans carpets in homes, rentals, and businesses around Clarksville, TN. Our work uses hot-water extraction, and customers rate us 4.7 stars across 122 reviews.">
 <meta property="og:title" content="Patriot Cleaning">
-<meta property="og:description" content="A cleaner home, right here in Clarksville">
+<meta property="og:description" content="Carpets that look clean again">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,21 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 nav{display:flex;gap:26px;font-size:14.5px;font-weight:500}
 nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
 .call{background:var(--brand);color:var(--on);text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 16px;border-radius:999px;white-space:nowrap}
-.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff}
+.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff;background-size:cover;background-position:center}
+.hero.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,12,16,.88) 0%,rgba(10,12,16,.66) 48%,rgba(10,12,16,.25) 100%)}
+.hero.photo:before{display:none}.hero.photo svg.pattern{display:none}
+.hero .wrap{z-index:1}
+.hgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hcard{background:#fff;color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.hcard h3{font-family:Inter,sans-serif;font-size:20px;margin-bottom:6px;letter-spacing:0}
+.hcard p{color:var(--muted);font-size:14.5px;margin:0 0 16px}
+.hcard .rate{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+.hcard .rate b{font:700 28px/1 Inter}.hcard .rate small{color:var(--muted);display:block;font-size:12.5px}
+.hcard a{display:block;text-align:center;text-decoration:none;font-weight:700;padding:14px;border-radius:12px;margin-top:10px}
+.hcard a.p{background:var(--brand);color:#fff}.hcard a.s{border:1.5px solid var(--line);color:var(--ink)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;background:var(--line)}
+.gal img:first-child{grid-column:span 2;grid-row:span 2}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 10%,rgba(255,255,255,.14),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(0,0,0,.25),transparent 60%)}
 .hero svg.pattern{position:absolute;right:-60px;bottom:-60px;width:520px;opacity:.12}
 .hero .wrap{position:relative;padding:84px 20px 92px}
@@ -91,72 +106,75 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .bar{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,244,.96);border-top:1px solid var(--line);z-index:30}
 .bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:12px;background:var(--brand);color:#fff}
 .bar a.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-@media (max-width:900px){nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:900px){.hgrid{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
 @media (max-width:600px){.grid,.steps{grid-template-columns:1fr}.hero .wrap{padding:56px 20px 64px}section{padding:64px 0}.quote{padding:30px 22px;border-radius:20px}.call{display:none}.bar{display:flex}.logo small{display:none}}
 </style>
 </head>
 <body>
 <div class="pv"><b>Free preview</b> built for Patriot Cleaning by Cole Ormont · Not live yet</div>
 <header><div class="wrap">
-<a class="logo" href="#top"><span class="mark">PC</span><span><b>Patriot Cleaning</b><small>House cleaning · Clarksville, TN</small></span></a>
+<a class="logo" href="#top"><span class="mark">PC</span><span><b>Patriot Cleaning</b><small>Carpet cleaning · Clarksville, TN</small></span></a>
 <nav><a href="#services">Services</a><a href="#how">How it works</a><a href="#area">Service area</a><a href="#faq">FAQ</a></nav>
 <a class="call" href="tel:+19318010865">Call 931-801-0865</a>
 </div></header>
 
-<div class="hero" id="top">
+<div class="hero photo" id="top" style="background-image:url('p0.jpg')">
 <svg class="pattern" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1"><circle cx="100" cy="100" r="10"/><circle cx="100" cy="100" r="19"/><circle cx="100" cy="100" r="28"/><circle cx="100" cy="100" r="37"/><circle cx="100" cy="100" r="46"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="73"/><circle cx="100" cy="100" r="82"/><circle cx="100" cy="100" r="91"/></svg>
-<div class="wrap">
+<div class="wrap"><div class="hgrid"><div>
 <span class="badge"><span class="stars">★★★★★</span> 4.7 on Google · 122 reviews</span>
-<h1>A cleaner home, <span>right here in Clarksville</span></h1>
-<p class="lead">Patriot Cleaning cleans homes in Clarksville, TN. Spend your time on what matters and come back to a fresh, tidy house.</p>
+<h1>Carpets that look <span>clean again</span></h1>
+<p class="lead">Patriot Cleaning deep cleans carpets in homes, rentals, and businesses around Clarksville, TN. Our work uses hot-water extraction, and customers rate us 4.7 stars across 122 reviews.</p>
 <div class="ctas"><a class="btn" href="#quote">Get a free quote</a><a class="btn ghost" href="tel:+19318010865">Call 931-801-0865</a></div>
-</div></div>
+</div>
+<div class="hcard"><h3>Free estimate</h3><p>Tell us about the job and get a straight price, usually same day.</p><div class="rate"><b>4.7</b><div><span class="stars">★★★★★</span><small>122 Google reviews</small></div></div><a class="p" href="#quote">Request a quote</a><a class="s" href="sms:+19318010865">Text 931-801-0865</a></div>
+</div></div></div>
 
 <div class="trust"><div class="wrap"><div><b>4.7 stars on Google</b><span>from 122 reviews</span></div><div><b>Local to Clarksville</b><span>close by, quick to respond</span></div><div><b>Talk to the owner</b><span>a real person picks up</span></div><div><b>Easy to book</b><span>call, text or send a request</span></div></div></div>
 
 <section id="services"><div class="wrap">
 <div class="eyebrow">What we do</div>
-<h2>House cleaning services</h2>
-<p class="intro">Pick what your home needs, from a quick tidy to a full top-to-bottom clean.</p>
-<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Routine house cleaning</h3><p>Regular visits keep dust, dirt and clutter from building up.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><h3>Deep cleaning</h3><p>A slower, more detailed clean for buildup that daily upkeep misses.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Kitchen cleaning</h3><p>Counters, sinks, appliance exteriors and floors get wiped down and cleaned.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12z"/></svg></div><h3>Bathroom cleaning</h3><p>Tubs, showers, toilets, sinks and mirrors are scrubbed and cleaned.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-8 8H6v-6zM4 20l2-2"/></svg></div><h3>Dusting and floors</h3><p>Surfaces are dusted, and floors are vacuumed and mopped.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg></div><h3>Recurring schedules</h3><p>Set up visits that fit your routine, weekly or on another schedule.</p></div></div>
+<h2>Carpet Cleaning Services</h2>
+<p class="intro">From everyday traffic lanes to tough stains, we clean carpet and fabric the deep way.</p>
+<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><h3>Carpet Cleaning</h3><p>Hot-water extraction pulls dirt and buildup out of the carpet fibers.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12z"/></svg></div><h3>Stain and Odor Removal</h3><p>We treat spots and lingering smells at the source instead of covering them up.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13c-3 0-5 3-5 5s2 2 5 2 5 0 5-2-2-5-5-5zM6 10a1.5 2 0 1 0 0-.01M18 10a1.5 2 0 1 0 0-.01M9.5 6a1.5 2 0 1 0 0-.01M14.5 6a1.5 2 0 1 0 0-.01"/></svg></div><h3>Pet Stain Treatment</h3><p>Targeted treatment for accidents and pet odors in carpet.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-8 8H6v-6zM4 20l2-2"/></svg></div><h3>Upholstery Cleaning</h3><p>Refresh sofas, chairs, and other fabric furniture.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 10h5l3 3v3h-8M6 19a2 2 0 1 0 0-.01M17 19a2 2 0 1 0 0-.01"/></svg></div><h3>Move-Out Carpet Cleaning</h3><p>Carpet cleaning for move-outs and rentals, ready for the next tenant or the walk-through.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Commercial Carpets</h3><p>Keep office and business floors looking cared for.</p></div></div>
 </div></section>
 
+<section id="work"><div class="wrap"><div class="eyebrow">Our work</div><h2>Recent jobs</h2><div class="gal"><img src="p1.jpg" alt="Patriot Cleaning job photo" loading="lazy"><img src="p2.jpg" alt="Patriot Cleaning job photo" loading="lazy"><img src="p3.jpg" alt="Patriot Cleaning job photo" loading="lazy"></div></div></section>
 <section class="band" id="how"><div class="wrap">
 <div class="eyebrow">How it works</div>
 <h2>Booking takes a minute.</h2>
 <p class="intro">No runaround. You talk to the owner, get a straight price, and we show up when we said we would.</p>
-<div class="steps"><div class="step"><h3>Request a quote</h3><p>Tell us about your home and what you want cleaned.</p></div><div class="step"><h3>Pick a time</h3><p>We agree on a day that works for your schedule.</p></div><div class="step"><h3>Enjoy a clean home</h3><p>We do the work so you can relax in a fresh space.</p></div></div>
+<div class="steps"><div class="step"><h3>Ask for a Quote</h3><p>Tell us about your carpet and the areas you need cleaned, and get a free quote.</p></div><div class="step"><h3>We Deep Clean</h3><p>Our technicians treat problem spots, then clean the carpet with hot-water extraction.</p></div><div class="step"><h3>Walk Through and Dry</h3><p>Look over the results with us, then let the carpet dry before you move furniture back.</p></div></div>
 </div></section>
 
 <section id="area"><div class="wrap split">
 <div>
 <div class="eyebrow">Service area</div>
 <h2>Local to Clarksville.</h2>
-<p class="intro" style="margin-bottom:18px">We clean homes in Clarksville and the communities around it.</p>
-<div class="areas"><span>Clarksville</span><span>Fort Campbell</span><span>Oak Grove</span><span>Sango</span><span>Woodlawn</span><span>Cunningham</span><span>Adams</span><span>Pleasant View</span></div>
-<ul class="why"><li>You deal with a local team, not a call center.</li><li>Rated 4.7 from 122 reviews.</li><li>Cleaning is tailored to your home and your needs.</li><li>Questions and quotes get a direct, friendly answer.</li></ul>
+<p class="intro" style="margin-bottom:18px">We clean carpets in Clarksville and the communities around it.</p>
+<div class="areas"><span>Clarksville</span><span>Oak Grove</span><span>Fort Campbell</span><span>Woodlawn</span><span>Cunningham</span><span>Adams</span><span>Pleasant View</span><span>Springfield</span><span>Dover</span></div>
+<ul class="why"><li>Carpet care is our focus, not a side service.</li><li>Local to Clarksville and the surrounding area.</li><li>Rated 4.7 stars across 122 reviews.</li><li>We work in homes, rentals, and commercial spaces.</li></ul>
 </div>
 <div class="rev"><div class="big">4.7</div><span class="stars">★★★★★</span><p>from 122 Google reviews</p><a href="https://www.google.com/maps/search/Patriot%20Cleaning%20Clarksville%2C%20TN" target="_blank" rel="noopener">Read the reviews on Google</a></div>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap split">
 <div><div class="eyebrow">Questions</div><h2>Good to know.</h2><p class="intro">Don't see your question? Call or text 931-801-0865.</p></div>
-<div class="faq"><details><summary>How much does house cleaning cost?</summary><p>It depends on the size of your home and the work involved. Ask for a free quote.</p></details><details><summary>What can I have cleaned?</summary><p>Kitchens, bathrooms, floors, dusting and more. Tell us what you need and we will work from there.</p></details><details><summary>Can I set up regular visits?</summary><p>Yes, recurring cleaning is a good fit for many homes. Ask about a schedule when you request your quote.</p></details><details><summary>Do you serve my area?</summary><p>We serve Clarksville and nearby towns. Send us your address and we will confirm.</p></details></div>
+<div class="faq"><details><summary>What is hot-water extraction?</summary><p>It is a deep cleaning method that uses hot water to loosen dirt in carpet fibers and then pulls the water and dirt back out.</p></details><details><summary>Can you treat pet stains and odors?</summary><p>Yes, we offer pet stain treatment. Results depend on the carpet and how long the stain has been there.</p></details><details><summary>Do you clean carpets in rentals and for move-outs?</summary><p>Yes. We clean carpets in rental properties and for move-outs.</p></details><details><summary>How much does carpet cleaning cost?</summary><p>It depends on the job, including the size of the area and the condition of the carpet. Ask for a free quote.</p></details></div>
 </div></section>
 
 <section id="quote" style="padding-top:0"><div class="wrap"><div class="quote">
-<div><div class="eyebrow" style="color:var(--soft)">Free quote</div><h2>Get your free quote</h2><p class="intro">Send a few details and Patriot Cleaning will get back to you with a price. Prefer to talk? Call 931-801-0865.</p></div>
+<div><div class="eyebrow" style="color:var(--soft)">Free quote</div><h2>Get Your Free Quote</h2><p class="intro">Send a few details and Patriot Cleaning will get back to you with a price. Prefer to talk? Call 931-801-0865.</p></div>
 <form onsubmit="return sendQuote(event)">
 <label>Your name<input name="n" required autocomplete="name"></label>
 <label>Address or town<input name="a" required autocomplete="street-address"></label>
-<label>What do you need?<select name="s"><option>Routine house cleaning</option><option>Deep cleaning</option><option>Kitchen cleaning</option><option>Bathroom cleaning</option><option>Dusting and floors</option><option>Recurring schedules</option><option>Something else</option></select></label>
+<label>What do you need?<select name="s"><option>Carpet Cleaning</option><option>Stain and Odor Removal</option><option>Pet Stain Treatment</option><option>Upholstery Cleaning</option><option>Move-Out Carpet Cleaning</option><option>Commercial Carpets</option><option>Something else</option></select></label>
 <label>Anything else?<textarea name="m" placeholder="Size of the job, timing, questions"></textarea></label>
 <button type="submit">Text my quote request</button>
 <span class="fine">Opens a text to 931-801-0865 with your details filled in.</span>
 </form>
 </div></div></section>
 
-<footer><div class="wrap"><span><b style="color:var(--ink)">Patriot Cleaning</b> · House cleaning · Clarksville, TN</span><span><a href="tel:+19318010865">931-801-0865</a></span></div></footer>
+<footer><div class="wrap"><span><b style="color:var(--ink)">Patriot Cleaning</b> · Carpet cleaning · Clarksville, TN</span><span><a href="tel:+19318010865">931-801-0865</a></span></div></footer>
 <div class="bar"><a href="tel:+19318010865">Call</a><a class="alt" href="#quote">Free quote</a></div>
 <script>
 function sendQuote(e){e.preventDefault();const f=e.target;
