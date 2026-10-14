@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
 <title>The Yard Barber landscaping · Landscaping in Bridgewater</title>
-<meta name="description" content="The Yard Barber helps Bridgewater, MA homeowners keep their outdoor space neat and well kept. From trimming to planting, we handle the yard work so you can enjoy it.">
+<meta name="description" content="The Yard Barber landscaping helps Bridgewater, MA homeowners keep their outdoor space neat and easy to enjoy. Tell us what your yard needs and we will help you plan it.">
 <meta property="og:title" content="The Yard Barber landscaping">
-<meta property="og:description" content="Yards That Look Good All Season Long">
+<meta property="og:description" content="A Cleaner, Sharper Yard Right Here in Bridgewater">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,21 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 nav{display:flex;gap:26px;font-size:14.5px;font-weight:500}
 nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
 .call{background:var(--brand);color:var(--on);text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 16px;border-radius:999px;white-space:nowrap}
-.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff}
+.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff;background-size:cover;background-position:center}
+.hero.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,12,16,.88) 0%,rgba(10,12,16,.66) 48%,rgba(10,12,16,.25) 100%)}
+.hero.photo:before{display:none}.hero.photo svg.pattern{display:none}
+.hero .wrap{z-index:1}
+.hgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hcard{background:#fff;color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.hcard h3{font-family:Inter,sans-serif;font-size:20px;margin-bottom:6px;letter-spacing:0}
+.hcard p{color:var(--muted);font-size:14.5px;margin:0 0 16px}
+.hcard .rate{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+.hcard .rate b{font:700 28px/1 Inter}.hcard .rate small{color:var(--muted);display:block;font-size:12.5px}
+.hcard a{display:block;text-align:center;text-decoration:none;font-weight:700;padding:14px;border-radius:12px;margin-top:10px}
+.hcard a.p{background:var(--brand);color:#fff}.hcard a.s{border:1.5px solid var(--line);color:var(--ink)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;background:var(--line)}
+.gal img:first-child{grid-column:span 2;grid-row:span 2}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 10%,rgba(255,255,255,.14),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(0,0,0,.25),transparent 60%)}
 .hero svg.pattern{position:absolute;right:-60px;bottom:-60px;width:520px;opacity:.12}
 .hero .wrap{position:relative;padding:84px 20px 92px}
@@ -91,12 +106,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .bar{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,244,.96);border-top:1px solid var(--line);z-index:30}
 .bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:12px;background:var(--brand);color:#fff}
 .bar a.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-@media (max-width:900px){nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:900px){.hgrid{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
 @media (max-width:600px){.grid,.steps{grid-template-columns:1fr}.hero .wrap{padding:56px 20px 64px}section{padding:64px 0}.quote{padding:30px 22px;border-radius:20px}.call{display:none}.bar{display:flex}.logo small{display:none}}
+.pv a{color:#f5b83d;font-weight:700;text-decoration:none;margin-left:6px}
+.claim{background:var(--ink);color:#f2efe8;padding:72px 0}
+.claim h2{color:#fff;margin:10px 0 12px}.claim p{color:#c9c5bc;max-width:52ch;margin:0}
+.cl{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.t3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.t3 div{border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px}
+.t3 b{display:block;font-size:24px;color:#fff}.t3 span{font-size:13px;color:#c9c5bc;line-height:1.35;display:block;margin-top:4px}
+.clb{display:grid;gap:10px}
+.clb a{display:block;text-align:center;padding:16px;border-radius:12px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.25);color:#fff}
+.clb a.go{background:#f5b83d;color:#14140f;border-color:#f5b83d}
+.clb small{color:#9e9a91;text-align:center;font-size:13px}
+@media (max-width:900px){.cl{grid-template-columns:1fr}.t3{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:600px){.claim{padding:56px 0 110px}.t3 b{font-size:20px}}
 </style>
 </head>
 <body>
-<div class="pv"><b>Free preview</b> built for The Yard Barber landscaping by Cole Ormont · Not live yet</div>
+<div class="pv"><b>Free preview</b> built for The Yard Barber landscaping by Cole Ormont · Not live yet<a href="#claim">Make it yours ↓</a></div>
 <header><div class="wrap">
 <a class="logo" href="#top"><span class="mark">YB</span><span><b>The Yard Barber landscaping</b><small>Landscaping · Bridgewater, MA</small></span></a>
 <nav><a href="#services">Services</a><a href="#how">How it works</a><a href="#area">Service area</a><a href="#faq">FAQ</a></nav>
@@ -105,43 +133,46 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 
 <div class="hero" id="top">
 <svg class="pattern" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1"><circle cx="100" cy="100" r="10"/><circle cx="100" cy="100" r="19"/><circle cx="100" cy="100" r="28"/><circle cx="100" cy="100" r="37"/><circle cx="100" cy="100" r="46"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="73"/><circle cx="100" cy="100" r="82"/><circle cx="100" cy="100" r="91"/></svg>
-<div class="wrap">
+<div class="wrap"><div class="hgrid"><div>
 <span class="badge">Serving Bridgewater and nearby towns</span>
-<h1>Yards That Look Good <span>All Season Long</span></h1>
-<p class="lead">The Yard Barber helps Bridgewater, MA homeowners keep their outdoor space neat and well kept. From trimming to planting, we handle the yard work so you can enjoy it.</p>
+<h1>A Cleaner, Sharper Yard <span>Right Here in Bridgewater</span></h1>
+<p class="lead">The Yard Barber landscaping helps Bridgewater, MA homeowners keep their outdoor space neat and easy to enjoy. Tell us what your yard needs and we will help you plan it.</p>
 <div class="ctas"><a class="btn" href="#quote">Get a free quote</a><a class="btn ghost" href="tel:+15086317446">Call 508-631-7446</a></div>
-</div></div>
+</div>
+<div class="hcard"><h3>Free estimate</h3><p>Tell us about the job and get a straight price, usually same day.</p><a class="p" href="#quote">Request a quote</a><a class="s" href="sms:+15086317446">Text 508-631-7446</a></div>
+</div></div></div>
 
 <div class="trust"><div class="wrap"><div><b>Free quotes</b><span>no pressure, no obligation</span></div><div><b>Local to Bridgewater</b><span>close by, quick to respond</span></div><div><b>Talk to the owner</b><span>a real person picks up</span></div><div><b>Easy to book</b><span>call, text or send a request</span></div></div></div>
 
 <section id="services"><div class="wrap">
 <div class="eyebrow">What we do</div>
 <h2>Landscaping Services We Offer</h2>
-<p class="intro">Pick one service or combine a few to fit what your yard needs.</p>
-<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20c0-5-2-8-3-9M10 20c0-6 1-10 3-13M14 20c0-4 2-7 4-8M18 20c0-3 1-5 3-6"/></svg></div><h3>Lawn Mowing</h3><p>Clean, even cuts that keep your grass looking tidy.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14zM5 19l7-7"/></svg></div><h3>Hedge and Shrub Trimming</h3><p>Shaped plants that stay in bounds and look sharp.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-8 8H6v-6zM4 20l2-2"/></svg></div><h3>Mulch and Bed Care</h3><p>Fresh mulch and weeded beds give planting areas a finished look.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-6M12 2l6 8h-3l4 6H5l4-6H6z"/></svg></div><h3>Planting</h3><p>New shrubs, flowers, and plants placed where they fit your space.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg></div><h3>Seasonal Cleanups</h3><p>Leaves, branches, and debris cleared in spring and fall.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 10h5l3 3v3h-8M6 19a2 2 0 1 0 0-.01M17 19a2 2 0 1 0 0-.01"/></svg></div><h3>Yard Haul-Away</h3><p>Yard waste and clippings loaded up and taken off your property.</p></div></div>
+<p class="intro">Here are some of the ways we can help your yard look cared for all season.</p>
+<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20c0-5-2-8-3-9M10 20c0-6 1-10 3-13M14 20c0-4 2-7 4-8M18 20c0-3 1-5 3-6"/></svg></div><h3>Lawn Mowing</h3><p>Regular cuts and trimming keep your lawn even and tidy.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14zM5 19l7-7"/></svg></div><h3>Spring and Fall Cleanups</h3><p>We clear leaves, branches and debris so your yard is ready for the next season.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-8 8H6v-6zM4 20l2-2"/></svg></div><h3>Mulch and Bed Edging</h3><p>Fresh mulch and crisp edges give garden beds a clean, finished look.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-6M12 2l6 8h-3l4 6H5l4-6H6z"/></svg></div><h3>Planting and Shrubs</h3><p>New plants and shrubs add color and shape to your property.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Hedge and Shrub Trimming</h3><p>Careful trimming keeps hedges neat and under control.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Yard Refresh Projects</h3><p>Tell us your ideas and we will talk through ways to improve your outdoor space.</p></div></div>
 </div></section>
+
 
 <section class="band" id="how"><div class="wrap">
 <div class="eyebrow">How it works</div>
 <h2>Booking takes a minute.</h2>
 <p class="intro">No runaround. You talk to the owner, get a straight price, and we show up when we said we would.</p>
-<div class="steps"><div class="step"><h3>Tell Us About Your Yard</h3><p>Send a quick request with what you need done and where you are.</p></div><div class="step"><h3>Get a Free Quote</h3><p>We review the job and give you a clear quote before any work starts.</p></div><div class="step"><h3>We Do the Work</h3><p>We show up, take care of the yard, and clean up when we finish.</p></div></div>
+<div class="steps"><div class="step"><h3>Tell Us About Your Yard</h3><p>Send a quick message with what you want done and where you are.</p></div><div class="step"><h3>Get a Free Quote</h3><p>We review the details and give you a clear quote before any work starts.</p></div><div class="step"><h3>We Do the Work</h3><p>We show up, take care of your yard and leave it looking tidy.</p></div></div>
 </div></section>
 
 <section id="area"><div class="wrap split">
 <div>
 <div class="eyebrow">Service area</div>
 <h2>Local to Bridgewater.</h2>
-<p class="intro" style="margin-bottom:18px">We provide landscaping for Bridgewater and the towns around it.</p>
-<div class="areas"><span>Bridgewater</span><span>West Bridgewater</span><span>East Bridgewater</span><span>Raynham</span><span>Middleborough</span><span>Brockton</span><span>Taunton</span><span>Halifax</span><span>Whitman</span></div>
-<ul class="why"><li>Local to Bridgewater and nearby towns</li><li>Direct communication with the people doing the work</li><li>Care for your yard, not a one-size-fits-all routine</li><li>Free quotes with no pressure</li></ul>
+<p class="intro" style="margin-bottom:18px">We work with homeowners in Bridgewater and the towns around it.</p>
+<div class="areas"><span>Bridgewater</span><span>West Bridgewater</span><span>East Bridgewater</span><span>Raynham</span><span>Brockton</span><span>Middleborough</span><span>Taunton</span><span>Easton</span></div>
+<ul class="why"><li>Local to the Bridgewater area</li><li>Clear quotes before work begins</li><li>Simple, direct communication</li><li>Care for the details of your yard</li></ul>
 </div>
 <div class="rev"><div class="big" style="font-size:52px">Free quotes</div><p style="margin-top:12px">Tell us what you need and get a straight price.</p><a href="#quote">Get a quote</a></div>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap split">
 <div><div class="eyebrow">Questions</div><h2>Good to know.</h2><p class="intro">Don't see your question? Call or text 508-631-7446.</p></div>
-<div class="faq"><details><summary>How much does landscaping cost?</summary><p>It depends on the size of your yard and the work involved. Ask for a free quote and we will give you a clear number.</p></details><details><summary>Which towns do you serve?</summary><p>We work in Bridgewater and nearby communities. Send a request and we will confirm we can get to your address.</p></details><details><summary>Can I book a one-time job?</summary><p>Yes. You can ask for a single cleanup or project, or set up regular yard care.</p></details><details><summary>How do I get started?</summary><p>Fill out the quote form with your name, address, and what you need. We will follow up to talk through the details.</p></details></div>
+<div class="faq"><details><summary>How much does landscaping cost?</summary><p>It depends on the size of your yard and the work involved. Ask us for a free quote.</p></details><details><summary>Do you serve my town?</summary><p>We serve Bridgewater and nearby towns. Send us your address and we will let you know.</p></details><details><summary>Can I book a one-time job?</summary><p>Tell us what you need and we will let you know how we can help, whether it is a single visit or ongoing care.</p></details><details><summary>How do I get started?</summary><p>Fill out the quote form with a few details about your yard. We will get back to you with next steps.</p></details></div>
 </div></section>
 
 <section id="quote" style="padding-top:0"><div class="wrap"><div class="quote">
@@ -149,13 +180,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 <form onsubmit="return sendQuote(event)">
 <label>Your name<input name="n" required autocomplete="name"></label>
 <label>Address or town<input name="a" required autocomplete="street-address"></label>
-<label>What do you need?<select name="s"><option>Lawn Mowing</option><option>Hedge and Shrub Trimming</option><option>Mulch and Bed Care</option><option>Planting</option><option>Seasonal Cleanups</option><option>Yard Haul-Away</option><option>Something else</option></select></label>
+<label>What do you need?<select name="s"><option>Lawn Mowing</option><option>Spring and Fall Cleanups</option><option>Mulch and Bed Edging</option><option>Planting and Shrubs</option><option>Hedge and Shrub Trimming</option><option>Yard Refresh Projects</option><option>Something else</option></select></label>
 <label>Anything else?<textarea name="m" placeholder="Size of the job, timing, questions"></textarea></label>
 <button type="submit">Text my quote request</button>
 <span class="fine">Opens a text to 508-631-7446 with your details filled in.</span>
 </form>
 </div></div></section>
 
+<section id="claim" class="claim"><div class="wrap"><div class="cl">
+<div><div class="eyebrow" style="color:#f5b83d">For The Yard Barber landscaping</div><h2>Like it? It can be live this week.</h2>
+<p>This is a free preview built for your business. Keep it as is or tell Cole what to change. Your domain, your site, you own it.</p>
+<div class="t3"><div><b>$399</b><span>This page, live on your own domain</span></div><div><b>$650</b><span>Full site with your photos and gallery</span></div><div><b>$850+</b><span>Everything plus online booking</span></div></div></div>
+<div class="clb"><a class="go" href="sms:+15088077554?&body=Hi%20Cole%2C%20I%20saw%20the%20preview%20you%20made%20for%20The%20Yard%20Barber%20landscaping.%20I%27m%20interested.">Text Cole about this site</a><a href="tel:+15088077554">Call Cole · (508) 807-7554</a><small>Half to start, half when it's live. No contracts.</small></div>
+</div></div></section>
 <footer><div class="wrap"><span><b style="color:var(--ink)">The Yard Barber landscaping</b> · Landscaping · Bridgewater, MA</span><span><a href="tel:+15086317446">508-631-7446</a></span></div></footer>
 <div class="bar"><a href="tel:+15086317446">Call</a><a class="alt" href="#quote">Free quote</a></div>
 <script>
