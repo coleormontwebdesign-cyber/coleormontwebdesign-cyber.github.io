@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
 <title>J&amp;M Landscaping construction · Landscaping and construction in Brockton</title>
-<meta name="description" content="J&amp;M Landscaping construction serves homeowners in Brockton, MA. We handle planting, hardscape and outdoor building projects.">
+<meta name="description" content="J&amp;M Landscaping construction helps Brockton, MA homeowners shape their yards. From planting to patios and walls, we build outdoor spaces that work.">
 <meta property="og:title" content="J&amp;M Landscaping construction">
 <meta property="og:description" content="Outdoor spaces built to fit your home">
 <meta name="robots" content="noindex">
@@ -29,7 +30,21 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 nav{display:flex;gap:26px;font-size:14.5px;font-weight:500}
 nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
 .call{background:var(--brand);color:var(--on);text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 16px;border-radius:999px;white-space:nowrap}
-.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff}
+.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff;background-size:cover;background-position:center}
+.hero.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,12,16,.88) 0%,rgba(10,12,16,.66) 48%,rgba(10,12,16,.25) 100%)}
+.hero.photo:before{display:none}.hero.photo svg.pattern{display:none}
+.hero .wrap{z-index:1}
+.hgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hcard{background:#fff;color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.hcard h3{font-family:Inter,sans-serif;font-size:20px;margin-bottom:6px;letter-spacing:0}
+.hcard p{color:var(--muted);font-size:14.5px;margin:0 0 16px}
+.hcard .rate{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+.hcard .rate b{font:700 28px/1 Inter}.hcard .rate small{color:var(--muted);display:block;font-size:12.5px}
+.hcard a{display:block;text-align:center;text-decoration:none;font-weight:700;padding:14px;border-radius:12px;margin-top:10px}
+.hcard a.p{background:var(--brand);color:#fff}.hcard a.s{border:1.5px solid var(--line);color:var(--ink)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;background:var(--line)}
+.gal img:first-child{grid-column:span 2;grid-row:span 2}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 10%,rgba(255,255,255,.14),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(0,0,0,.25),transparent 60%)}
 .hero svg.pattern{position:absolute;right:-60px;bottom:-60px;width:520px;opacity:.12}
 .hero .wrap{position:relative;padding:84px 20px 92px}
@@ -91,12 +106,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .bar{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,244,.96);border-top:1px solid var(--line);z-index:30}
 .bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:12px;background:var(--brand);color:#fff}
 .bar a.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-@media (max-width:900px){nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:900px){.hgrid{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
 @media (max-width:600px){.grid,.steps{grid-template-columns:1fr}.hero .wrap{padding:56px 20px 64px}section{padding:64px 0}.quote{padding:30px 22px;border-radius:20px}.call{display:none}.bar{display:flex}.logo small{display:none}}
+.pv a{color:#f5b83d;font-weight:700;text-decoration:none;margin-left:6px}
+.claim{background:var(--ink);color:#f2efe8;padding:72px 0}
+.claim h2{color:#fff;margin:10px 0 12px}.claim p{color:#c9c5bc;max-width:52ch;margin:0}
+.cl{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.t3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.t3 div{border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px}
+.t3 b{display:block;font-size:24px;color:#fff}.t3 span{font-size:13px;color:#c9c5bc;line-height:1.35;display:block;margin-top:4px}
+.clb{display:grid;gap:10px}
+.clb a{display:block;text-align:center;padding:16px;border-radius:12px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.25);color:#fff}
+.clb a.go{background:#f5b83d;color:#14140f;border-color:#f5b83d}
+.clb small{color:#9e9a91;text-align:center;font-size:13px}
+@media (max-width:900px){.cl{grid-template-columns:1fr}.t3{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:600px){.claim{padding:56px 0 110px}.t3 b{font-size:20px}}
 </style>
 </head>
 <body>
-<div class="pv"><b>Free preview</b> built for J&amp;M Landscaping construction by Cole Ormont · Not live yet</div>
+<div class="pv"><b>Free preview</b> built for J&amp;M Landscaping construction by Cole Ormont · Not live yet<a href="#claim">Make it yours ↓</a></div>
 <header><div class="wrap">
 <a class="logo" href="#top"><span class="mark">JM</span><span><b>J&amp;M Landscaping construction</b><small>Landscaping and construction · Brockton, MA</small></span></a>
 <nav><a href="#services">Services</a><a href="#how">How it works</a><a href="#area">Service area</a><a href="#faq">FAQ</a></nav>
@@ -105,27 +133,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 
 <div class="hero" id="top">
 <svg class="pattern" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1"><circle cx="100" cy="100" r="10"/><circle cx="100" cy="100" r="19"/><circle cx="100" cy="100" r="28"/><circle cx="100" cy="100" r="37"/><circle cx="100" cy="100" r="46"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="73"/><circle cx="100" cy="100" r="82"/><circle cx="100" cy="100" r="91"/></svg>
-<div class="wrap">
+<div class="wrap"><div class="hgrid"><div>
 <span class="badge">Serving Brockton and nearby towns</span>
 <h1>Outdoor spaces built <span>to fit your home</span></h1>
-<p class="lead">J&amp;M Landscaping construction serves homeowners in Brockton, MA. We handle planting, hardscape and outdoor building projects.</p>
+<p class="lead">J&amp;M Landscaping construction helps Brockton, MA homeowners shape their yards. From planting to patios and walls, we build outdoor spaces that work.</p>
 <div class="ctas"><a class="btn" href="#quote">Get a free quote</a><a class="btn ghost" href="tel:+16176379257">Call 617-637-9257</a></div>
-</div></div>
+</div>
+<div class="hcard"><h3>Free estimate</h3><p>Tell us about the job and get a straight price, usually same day.</p><a class="p" href="#quote">Request a quote</a><a class="s" href="sms:+16176379257">Text 617-637-9257</a></div>
+</div></div></div>
 
 <div class="trust"><div class="wrap"><div><b>Free quotes</b><span>no pressure, no obligation</span></div><div><b>Local to Brockton</b><span>close by, quick to respond</span></div><div><b>Talk to the owner</b><span>a real person picks up</span></div><div><b>Easy to book</b><span>call, text or send a request</span></div></div></div>
 
 <section id="services"><div class="wrap">
 <div class="eyebrow">What we do</div>
 <h2>Landscaping and construction services</h2>
-<p class="intro">From new installs to updates on an existing yard, here is what the work can include.</p>
-<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14zM5 19l7-7"/></svg></div><h3>Landscape design</h3><p>We plan beds, walkways and open space around how you use your yard.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Patios and walkways</h3><p>Pavers or stone are laid over a prepared base for a flat, lasting surface.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Retaining walls</h3><p>Walls hold back sloped ground and give a yard clean, defined levels.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-6M12 2l6 8h-3l4 6H5l4-6H6z"/></svg></div><h3>Planting and beds</h3><p>New shrubs, flowers and mulch give your property shape and color.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20c0-5-2-8-3-9M10 20c0-6 1-10 3-13M14 20c0-4 2-7 4-8M18 20c0-3 1-5 3-6"/></svg></div><h3>Lawn installation</h3><p>Grading and seed or sod prepare bare areas for a full, even lawn.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 10h5l3 3v3h-8M6 19a2 2 0 1 0 0-.01M17 19a2 2 0 1 0 0-.01"/></svg></div><h3>Cleanups and hauling</h3><p>We clear brush, debris and old material to make room for new work.</p></div></div>
+<p class="intro">Here are some of the ways we can help improve your yard.</p>
+<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14zM5 19l7-7"/></svg></div><h3>Planting and beds</h3><p>New garden beds and plantings add shape and color to your yard.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-8 8H6v-6zM4 20l2-2"/></svg></div><h3>Mulch and edging</h3><p>Fresh mulch and clean edges give beds a tidy, finished look.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Patios and walkways</h3><p>Hardscape work gives you solid, usable space outside your door.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Retaining walls</h3><p>Walls can hold back soil, level a slope and add structure to a yard.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12z"/></svg></div><h3>Grading and drainage</h3><p>Reshaping the ground helps direct water away from your home.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 10h5l3 3v3h-8M6 19a2 2 0 1 0 0-.01M17 19a2 2 0 1 0 0-.01"/></svg></div><h3>Cleanups and hauling</h3><p>We clear brush, debris and leftover material so the site is ready for work.</p></div></div>
 </div></section>
+
 
 <section class="band" id="how"><div class="wrap">
 <div class="eyebrow">How it works</div>
 <h2>Booking takes a minute.</h2>
 <p class="intro">No runaround. You talk to the owner, get a straight price, and we show up when we said we would.</p>
-<div class="steps"><div class="step"><h3>Tell us your plan</h3><p>Send a message or call with a description of your yard and what you want done.</p></div><div class="step"><h3>Get a free quote</h3><p>We review the job and give you a clear quote before any work begins.</p></div><div class="step"><h3>We build it</h3><p>Our crew does the work and cleans up the site when we finish.</p></div></div>
+<div class="steps"><div class="step"><h3>Tell us your plan</h3><p>Call or send a message about your yard and what you want done.</p></div><div class="step"><h3>Get a free quote</h3><p>We look at the job and explain the work and the cost in plain terms.</p></div><div class="step"><h3>We do the work</h3><p>We schedule the job, get it done and clean up when we finish.</p></div></div>
 </div></section>
 
 <section id="area"><div class="wrap split">
@@ -133,29 +164,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 <div class="eyebrow">Service area</div>
 <h2>Local to Brockton.</h2>
 <p class="intro" style="margin-bottom:18px">We work with homeowners in Brockton and the towns around it.</p>
-<div class="areas"><span>Brockton</span><span>Avon</span><span>Stoughton</span><span>Easton</span><span>West Bridgewater</span><span>Bridgewater</span><span>Whitman</span><span>Abington</span><span>Randolph</span></div>
-<ul class="why"><li>You deal directly with the people doing the work.</li><li>Local crews know Brockton area yards and soil.</li><li>Quotes are clear and built around your project.</li><li>Small jobs matter as much as large ones.</li></ul>
+<div class="areas"><span>Brockton</span><span>Easton</span><span>Stoughton</span><span>Avon</span><span>Abington</span><span>Whitman</span><span>West Bridgewater</span><span>Bridgewater</span><span>Holbrook</span></div>
+<ul class="why"><li>Based right here in Brockton, MA</li><li>Free quotes with no pressure</li><li>Plain, direct communication</li><li>One team for both landscaping and construction work</li></ul>
 </div>
 <div class="rev"><div class="big" style="font-size:52px">Free quotes</div><p style="margin-top:12px">Tell us what you need and get a straight price.</p><a href="#quote">Get a quote</a></div>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap split">
 <div><div class="eyebrow">Questions</div><h2>Good to know.</h2><p class="intro">Don't see your question? Call or text 617-637-9257.</p></div>
-<div class="faq"><details><summary>How much does a landscaping project cost?</summary><p>It depends on the size and details of the job. Ask for a free quote and we will go over your options.</p></details><details><summary>Do you handle both design and building?</summary><p>Yes. The name says both landscaping and construction, so you can talk through your ideas and the build in one place.</p></details><details><summary>Which towns do you serve?</summary><p>We serve Brockton and nearby South Shore and Plymouth County towns. Reach out if you are not sure we cover your address.</p></details><details><summary>How do I get started?</summary><p>Send a request through this site with a few details about your yard. We will follow up to talk about the project and a free quote.</p></details></div>
+<div class="faq"><details><summary>What areas do you serve?</summary><p>We serve Brockton and nearby towns. Call or send a message to ask about your address.</p></details><details><summary>How much does a project cost?</summary><p>It depends on the size and details of the job. Ask for a free quote and we will walk through it with you.</p></details><details><summary>Do you build patios and walls as well as plant?</summary><p>Yes, our work covers both landscaping and construction. Tell us what you have in mind and we will go over the options.</p></details><details><summary>How do I get started?</summary><p>Fill out the quote form or give us a call. We will talk through your project and set up a time to look at it.</p></details></div>
 </div></section>
 
 <section id="quote" style="padding-top:0"><div class="wrap"><div class="quote">
-<div><div class="eyebrow" style="color:var(--soft)">Free quote</div><h2>Request your free quote</h2><p class="intro">Send a few details and J&amp;M Landscaping construction will get back to you with a price. Prefer to talk? Call 617-637-9257.</p></div>
+<div><div class="eyebrow" style="color:var(--soft)">Free quote</div><h2>Get your free quote</h2><p class="intro">Send a few details and J&amp;M Landscaping construction will get back to you with a price. Prefer to talk? Call 617-637-9257.</p></div>
 <form onsubmit="return sendQuote(event)">
 <label>Your name<input name="n" required autocomplete="name"></label>
 <label>Address or town<input name="a" required autocomplete="street-address"></label>
-<label>What do you need?<select name="s"><option>Landscape design</option><option>Patios and walkways</option><option>Retaining walls</option><option>Planting and beds</option><option>Lawn installation</option><option>Cleanups and hauling</option><option>Something else</option></select></label>
+<label>What do you need?<select name="s"><option>Planting and beds</option><option>Mulch and edging</option><option>Patios and walkways</option><option>Retaining walls</option><option>Grading and drainage</option><option>Cleanups and hauling</option><option>Something else</option></select></label>
 <label>Anything else?<textarea name="m" placeholder="Size of the job, timing, questions"></textarea></label>
 <button type="submit">Text my quote request</button>
 <span class="fine">Opens a text to 617-637-9257 with your details filled in.</span>
 </form>
 </div></div></section>
 
+<section id="claim" class="claim"><div class="wrap"><div class="cl">
+<div><div class="eyebrow" style="color:#f5b83d">For J&amp;M Landscaping construction</div><h2>Like it? It can be live this week.</h2>
+<p>This is a free preview built for your business. Keep it as is or tell Cole what to change. Your domain, your site, you own it.</p>
+<div class="t3"><div><b>$399</b><span>This page, live on your own domain</span></div><div><b>$650</b><span>Full site with your photos and gallery</span></div><div><b>$850+</b><span>Everything plus online booking</span></div></div></div>
+<div class="clb"><a class="go" href="sms:+15088077554?&body=Hi%20Cole%2C%20I%20saw%20the%20preview%20you%20made%20for%20J%26M%20Landscaping%20construction.%20I%27m%20interested.">Text Cole about this site</a><a href="tel:+15088077554">Call Cole · (508) 807-7554</a><small>Half to start, half when it's live. No contracts.</small></div>
+</div></div></section>
 <footer><div class="wrap"><span><b style="color:var(--ink)">J&amp;M Landscaping construction</b> · Landscaping and construction · Brockton, MA</span><span><a href="tel:+16176379257">617-637-9257</a></span></div></footer>
 <div class="bar"><a href="tel:+16176379257">Call</a><a class="alt" href="#quote">Free quote</a></div>
 <script>
