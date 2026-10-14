@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kingston Rekey &amp; Auto Keys · Locksmith and auto keys in Kingston</title>
-<meta name="description" content="Kingston Rekey &amp; Auto Keys helps homes and drivers in Kingston, MA with lock rekeying and automotive keys. Call, tell us what you need, and get a clear plan.">
+<meta name="referrer" content="no-referrer">
+<title>Kingston Rekey &amp; Auto Keys · Rekeying and auto keys in Kingston</title>
+<meta name="description" content="Kingston Rekey &amp; Auto Keys helps people in Kingston, MA with rekeying and car keys. Tell us what you need and get a free quote.">
 <meta property="og:title" content="Kingston Rekey &amp; Auto Keys">
-<meta property="og:description" content="Rekeying and car keys handled right in Kingston">
+<meta property="og:description" content="Locks and car keys sorted out locally">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,21 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 nav{display:flex;gap:26px;font-size:14.5px;font-weight:500}
 nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
 .call{background:var(--brand);color:var(--on);text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 16px;border-radius:999px;white-space:nowrap}
-.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff}
+.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff;background-size:cover;background-position:center}
+.hero.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,12,16,.88) 0%,rgba(10,12,16,.66) 48%,rgba(10,12,16,.25) 100%)}
+.hero.photo:before{display:none}.hero.photo svg.pattern{display:none}
+.hero .wrap{z-index:1}
+.hgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hcard{background:#fff;color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.hcard h3{font-family:Inter,sans-serif;font-size:20px;margin-bottom:6px;letter-spacing:0}
+.hcard p{color:var(--muted);font-size:14.5px;margin:0 0 16px}
+.hcard .rate{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+.hcard .rate b{font:700 28px/1 Inter}.hcard .rate small{color:var(--muted);display:block;font-size:12.5px}
+.hcard a{display:block;text-align:center;text-decoration:none;font-weight:700;padding:14px;border-radius:12px;margin-top:10px}
+.hcard a.p{background:var(--brand);color:#fff}.hcard a.s{border:1.5px solid var(--line);color:var(--ink)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;background:var(--line)}
+.gal img:first-child{grid-column:span 2;grid-row:span 2}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 10%,rgba(255,255,255,.14),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(0,0,0,.25),transparent 60%)}
 .hero svg.pattern{position:absolute;right:-60px;bottom:-60px;width:520px;opacity:.12}
 .hero .wrap{position:relative;padding:84px 20px 92px}
@@ -91,26 +106,41 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .bar{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,244,.96);border-top:1px solid var(--line);z-index:30}
 .bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:12px;background:var(--brand);color:#fff}
 .bar a.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-@media (max-width:900px){nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:900px){.hgrid{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
 @media (max-width:600px){.grid,.steps{grid-template-columns:1fr}.hero .wrap{padding:56px 20px 64px}section{padding:64px 0}.quote{padding:30px 22px;border-radius:20px}.call{display:none}.bar{display:flex}.logo small{display:none}}
+.pv a{color:#f5b83d;font-weight:700;text-decoration:none;margin-left:6px}
+.claim{background:var(--ink);color:#f2efe8;padding:72px 0}
+.claim h2{color:#fff;margin:10px 0 12px}.claim p{color:#c9c5bc;max-width:52ch;margin:0}
+.cl{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.t3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.t3 div{border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px}
+.t3 b{display:block;font-size:24px;color:#fff}.t3 span{font-size:13px;color:#c9c5bc;line-height:1.35;display:block;margin-top:4px}
+.clb{display:grid;gap:10px}
+.clb a{display:block;text-align:center;padding:16px;border-radius:12px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.25);color:#fff}
+.clb a.go{background:#f5b83d;color:#14140f;border-color:#f5b83d}
+.clb small{color:#9e9a91;text-align:center;font-size:13px}
+@media (max-width:900px){.cl{grid-template-columns:1fr}.t3{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:600px){.claim{padding:56px 0 110px}.t3 b{font-size:20px}}
 </style>
 </head>
 <body>
-<div class="pv"><b>Free preview</b> built for Kingston Rekey &amp; Auto Keys by Cole Ormont · Not live yet</div>
+<div class="pv"><b>Free preview</b> built for Kingston Rekey &amp; Auto Keys by Cole Ormont · Not live yet<a href="#claim">Make it yours ↓</a></div>
 <header><div class="wrap">
-<a class="logo" href="#top"><span class="mark">KR</span><span><b>Kingston Rekey &amp; Auto Keys</b><small>Locksmith and auto keys · Kingston, MA</small></span></a>
+<a class="logo" href="#top"><span class="mark">KR</span><span><b>Kingston Rekey &amp; Auto Keys</b><small>Rekeying and auto keys · Kingston, MA</small></span></a>
 <nav><a href="#services">Services</a><a href="#how">How it works</a><a href="#area">Service area</a><a href="#faq">FAQ</a></nav>
 <a class="call" href="tel:+17816044017">Call 781-604-4017</a>
 </div></header>
 
 <div class="hero" id="top">
 <svg class="pattern" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1"><circle cx="100" cy="100" r="10"/><circle cx="100" cy="100" r="19"/><circle cx="100" cy="100" r="28"/><circle cx="100" cy="100" r="37"/><circle cx="100" cy="100" r="46"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="73"/><circle cx="100" cy="100" r="82"/><circle cx="100" cy="100" r="91"/></svg>
-<div class="wrap">
+<div class="wrap"><div class="hgrid"><div>
 <span class="badge">Serving Kingston and nearby towns</span>
-<h1>Rekeying and car keys <span>handled right in Kingston</span></h1>
-<p class="lead">Kingston Rekey &amp; Auto Keys helps homes and drivers in Kingston, MA with lock rekeying and automotive keys. Call, tell us what you need, and get a clear plan.</p>
+<h1>Locks and car keys <span>sorted out locally</span></h1>
+<p class="lead">Kingston Rekey &amp; Auto Keys helps people in Kingston, MA with rekeying and car keys. Tell us what you need and get a free quote.</p>
 <div class="ctas"><a class="btn" href="#quote">Get a free quote</a><a class="btn ghost" href="tel:+17816044017">Call 781-604-4017</a></div>
-</div></div>
+</div>
+<div class="hcard"><h3>Free estimate</h3><p>Tell us about the job and get a straight price, usually same day.</p><a class="p" href="#quote">Request a quote</a><a class="s" href="sms:+17816044017">Text 781-604-4017</a></div>
+</div></div></div>
 
 <div class="trust"><div class="wrap"><div><b>Free quotes</b><span>no pressure, no obligation</span></div><div><b>Local to Kingston</b><span>close by, quick to respond</span></div><div><b>Talk to the owner</b><span>a real person picks up</span></div><div><b>Easy to book</b><span>call, text or send a request</span></div></div></div>
 
@@ -118,45 +148,52 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 <div class="eyebrow">What we do</div>
 <h2>Rekey and key services</h2>
 <p class="intro">Here is what you can ask us about.</p>
-<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Home rekeying</h3><p>We change the inside of your existing locks so old keys no longer work.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Lock rekey after a move</h3><p>Rekeying means you control who has a working key to your new place.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4l2-5h14l2 5v4zM3 16v3h3v-3M18 16v3h3v-3M7 12h10"/></svg></div><h3>Car key replacement</h3><p>Lost or damaged car key? We can help you get a working replacement.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Spare car keys</h3><p>A spare key on hand saves you stress when one goes missing.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Key duplication</h3><p>We copy standard keys so every person who needs one has one.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Lock repair and swaps</h3><p>Sticking, worn, or broken locks can be repaired or replaced.</p></div></div>
+<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Lock rekeying</h3><p>We change the inside of your lock so the old keys no longer work and a new key does.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4l2-5h14l2 5v4zM3 16v3h3v-3M18 16v3h3v-3M7 12h10"/></svg></div><h3>Auto key replacement</h3><p>Lost or broken car key? Ask us about getting a new one made.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Spare keys</h3><p>Keep an extra key on hand for your home or vehicle.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><h3>Key fob help</h3><p>Ask about programming or replacing a key fob for your car.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>New home rekeying</h3><p>Moving in? Rekeying means keys from previous owners or tenants stop working.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 10h5l3 3v3h-8M6 19a2 2 0 1 0 0-.01M17 19a2 2 0 1 0 0-.01"/></svg></div><h3>Lost key help</h3><p>Locked out or missing a key? Contact us to talk through your options.</p></div></div>
 </div></section>
+
 
 <section class="band" id="how"><div class="wrap">
 <div class="eyebrow">How it works</div>
 <h2>Booking takes a minute.</h2>
 <p class="intro">No runaround. You talk to the owner, get a straight price, and we show up when we said we would.</p>
-<div class="steps"><div class="step"><h3>Tell us what you need</h3><p>Call or send a message with your lock or vehicle details.</p></div><div class="step"><h3>Get a free quote</h3><p>We explain the work and the cost before we start.</p></div><div class="step"><h3>We do the work</h3><p>We rekey, cut, or replace, then test every key before we leave.</p></div></div>
+<div class="steps"><div class="step"><h3>Tell us what you need</h3><p>Call or send a message with your lock or vehicle details.</p></div><div class="step"><h3>Get a free quote</h3><p>We explain the work and the cost before we start.</p></div><div class="step"><h3>Keys that work</h3><p>We finish the job and make sure your new key works.</p></div></div>
 </div></section>
 
 <section id="area"><div class="wrap split">
 <div>
 <div class="eyebrow">Service area</div>
 <h2>Local to Kingston.</h2>
-<p class="intro" style="margin-bottom:18px">We serve Kingston and the nearby South Shore and Plymouth County towns.</p>
-<div class="areas"><span>Kingston</span><span>Plymouth</span><span>Duxbury</span><span>Plympton</span><span>Pembroke</span><span>Carver</span><span>Halifax</span><span>Marshfield</span></div>
-<ul class="why"><li>Local and easy to reach</li><li>Clear answers before work begins</li><li>Focused on locks and keys</li><li>Personal service for your home or car</li></ul>
+<p class="intro" style="margin-bottom:18px">We serve Kingston and nearby South Shore and Plymouth County towns.</p>
+<div class="areas"><span>Kingston</span><span>Plymouth</span><span>Duxbury</span><span>Pembroke</span><span>Plympton</span><span>Carver</span><span>Halifax</span><span>Hanson</span><span>Marshfield</span></div>
+<ul class="why"><li>Local to Kingston and the surrounding towns</li><li>Talk directly with the person doing the work</li><li>Clear quotes before any work begins</li><li>Focused on locks and keys, not everything else</li></ul>
 </div>
 <div class="rev"><div class="big" style="font-size:52px">Free quotes</div><p style="margin-top:12px">Tell us what you need and get a straight price.</p><a href="#quote">Get a quote</a></div>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap split">
 <div><div class="eyebrow">Questions</div><h2>Good to know.</h2><p class="intro">Don't see your question? Call or text 781-604-4017.</p></div>
-<div class="faq"><details><summary>What does rekeying mean?</summary><p>Rekeying changes the internal pins of a lock so it works with a new key. Your old keys stop working, and you keep the same hardware.</p></details><details><summary>Is rekeying cheaper than replacing locks?</summary><p>It depends on the job and the locks you have. Ask for a free quote and we will go over your options.</p></details><details><summary>Can you make a new car key if I lost all mine?</summary><p>In many cases, yes. It depends on the make, model, and year, so contact us with your vehicle details.</p></details><details><summary>How much does a service cost?</summary><p>It depends on the job. Ask for a free quote and we will explain it before any work starts.</p></details></div>
+<div class="faq"><details><summary>What does rekeying mean?</summary><p>Rekeying changes the inner parts of a lock so old keys stop working. You keep the same lock and get a new key.</p></details><details><summary>How much does it cost?</summary><p>It depends on the job, the lock, and the vehicle. Ask for a free quote.</p></details><details><summary>Can you help if I lost my only car key?</summary><p>Contact us with your vehicle&#x27;s make, model, and year. We will tell you what your options are.</p></details><details><summary>What should I have ready when I call?</summary><p>Have your address or town and the type of lock or vehicle. That helps us give you a clear quote.</p></details></div>
 </div></section>
 
 <section id="quote" style="padding-top:0"><div class="wrap"><div class="quote">
-<div><div class="eyebrow" style="color:var(--soft)">Free quote</div><h2>Ask for a free quote</h2><p class="intro">Send a few details and Kingston Rekey &amp; Auto Keys will get back to you with a price. Prefer to talk? Call 781-604-4017.</p></div>
+<div><div class="eyebrow" style="color:var(--soft)">Free quote</div><h2>Get your free quote</h2><p class="intro">Send a few details and Kingston Rekey &amp; Auto Keys will get back to you with a price. Prefer to talk? Call 781-604-4017.</p></div>
 <form onsubmit="return sendQuote(event)">
 <label>Your name<input name="n" required autocomplete="name"></label>
 <label>Address or town<input name="a" required autocomplete="street-address"></label>
-<label>What do you need?<select name="s"><option>Home rekeying</option><option>Lock rekey after a move</option><option>Car key replacement</option><option>Spare car keys</option><option>Key duplication</option><option>Lock repair and swaps</option><option>Something else</option></select></label>
+<label>What do you need?<select name="s"><option>Lock rekeying</option><option>Auto key replacement</option><option>Spare keys</option><option>Key fob help</option><option>New home rekeying</option><option>Lost key help</option><option>Something else</option></select></label>
 <label>Anything else?<textarea name="m" placeholder="Size of the job, timing, questions"></textarea></label>
 <button type="submit">Text my quote request</button>
 <span class="fine">Opens a text to 781-604-4017 with your details filled in.</span>
 </form>
 </div></div></section>
 
-<footer><div class="wrap"><span><b style="color:var(--ink)">Kingston Rekey &amp; Auto Keys</b> · Locksmith and auto keys · Kingston, MA</span><span><a href="tel:+17816044017">781-604-4017</a></span></div></footer>
+<section id="claim" class="claim"><div class="wrap"><div class="cl">
+<div><div class="eyebrow" style="color:#f5b83d">For Kingston Rekey &amp; Auto Keys</div><h2>Like it? It can be live this week.</h2>
+<p>This is a free preview built for your business. Keep it as is or tell Cole what to change. Your domain, your site, you own it.</p>
+<div class="t3"><div><b>$399</b><span>This page, live on your own domain</span></div><div><b>$650</b><span>Full site with your photos and gallery</span></div><div><b>$850+</b><span>Everything plus online booking</span></div></div></div>
+<div class="clb"><a class="go" href="sms:+15088077554?&body=Hi%20Cole%2C%20I%20saw%20the%20preview%20you%20made%20for%20Kingston%20Rekey%20%26%20Auto%20Keys.%20I%27m%20interested.">Text Cole about this site</a><a href="tel:+15088077554">Call Cole · (508) 807-7554</a><small>Half to start, half when it's live. No contracts.</small></div>
+</div></div></section>
+<footer><div class="wrap"><span><b style="color:var(--ink)">Kingston Rekey &amp; Auto Keys</b> · Rekeying and auto keys · Kingston, MA</span><span><a href="tel:+17816044017">781-604-4017</a></span></div></footer>
 <div class="bar"><a href="tel:+17816044017">Call</a><a class="alt" href="#quote">Free quote</a></div>
 <script>
 function sendQuote(e){e.preventDefault();const f=e.target;
