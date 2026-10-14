@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
 <title>Charlie&#x27;s Angels Dog Walking · Dog walking in Plymouth</title>
-<meta name="description" content="Charlie&#x27;s Angels Dog Walking gives dogs in Plymouth, MA the exercise and attention they need during the day. Your dog gets out, gets moving, and comes home calm.">
+<meta name="description" content="Charlie&#x27;s Angels Dog Walking gives dogs in Plymouth, MA a break from the day. Your dog gets outside, stretches out, and comes home ready to rest.">
 <meta property="og:title" content="Charlie&#x27;s Angels Dog Walking">
-<meta property="og:description" content="Happy Dogs Start With a Good Walk">
+<meta property="og:description" content="Happy walks for Plymouth dogs">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,21 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 nav{display:flex;gap:26px;font-size:14.5px;font-weight:500}
 nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
 .call{background:var(--brand);color:var(--on);text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 16px;border-radius:999px;white-space:nowrap}
-.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff}
+.hero{position:relative;overflow:hidden;background:var(--brand2);color:#fff;background-size:cover;background-position:center}
+.hero.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,12,16,.88) 0%,rgba(10,12,16,.66) 48%,rgba(10,12,16,.25) 100%)}
+.hero.photo:before{display:none}.hero.photo svg.pattern{display:none}
+.hero .wrap{z-index:1}
+.hgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hcard{background:#fff;color:var(--ink);border-radius:20px;padding:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.hcard h3{font-family:Inter,sans-serif;font-size:20px;margin-bottom:6px;letter-spacing:0}
+.hcard p{color:var(--muted);font-size:14.5px;margin:0 0 16px}
+.hcard .rate{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+.hcard .rate b{font:700 28px/1 Inter}.hcard .rate small{color:var(--muted);display:block;font-size:12.5px}
+.hcard a{display:block;text-align:center;text-decoration:none;font-weight:700;padding:14px;border-radius:12px;margin-top:10px}
+.hcard a.p{background:var(--brand);color:#fff}.hcard a.s{border:1.5px solid var(--line);color:var(--ink)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;background:var(--line)}
+.gal img:first-child{grid-column:span 2;grid-row:span 2}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 10%,rgba(255,255,255,.14),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(0,0,0,.25),transparent 60%)}
 .hero svg.pattern{position:absolute;right:-60px;bottom:-60px;width:520px;opacity:.12}
 .hero .wrap{position:relative;padding:84px 20px 92px}
@@ -91,12 +106,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .bar{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,244,.96);border-top:1px solid var(--line);z-index:30}
 .bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:12px;background:var(--brand);color:#fff}
 .bar a.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-@media (max-width:900px){nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:900px){.hgrid{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}nav{display:none}.grid,.steps{grid-template-columns:1fr 1fr}.split,.quote{grid-template-columns:1fr}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(3){border-left:0}.trust div:nth-child(n+3){border-top:1px solid var(--line)}}
 @media (max-width:600px){.grid,.steps{grid-template-columns:1fr}.hero .wrap{padding:56px 20px 64px}section{padding:64px 0}.quote{padding:30px 22px;border-radius:20px}.call{display:none}.bar{display:flex}.logo small{display:none}}
+.pv a{color:#f5b83d;font-weight:700;text-decoration:none;margin-left:6px}
+.claim{background:var(--ink);color:#f2efe8;padding:72px 0}
+.claim h2{color:#fff;margin:10px 0 12px}.claim p{color:#c9c5bc;max-width:52ch;margin:0}
+.cl{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.t3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.t3 div{border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px}
+.t3 b{display:block;font-size:24px;color:#fff}.t3 span{font-size:13px;color:#c9c5bc;line-height:1.35;display:block;margin-top:4px}
+.clb{display:grid;gap:10px}
+.clb a{display:block;text-align:center;padding:16px;border-radius:12px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.25);color:#fff}
+.clb a.go{background:#f5b83d;color:#14140f;border-color:#f5b83d}
+.clb small{color:#9e9a91;text-align:center;font-size:13px}
+@media (max-width:900px){.cl{grid-template-columns:1fr}.t3{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:600px){.claim{padding:56px 0 110px}.t3 b{font-size:20px}}
 </style>
 </head>
 <body>
-<div class="pv"><b>Free preview</b> built for Charlie&#x27;s Angels Dog Walking by Cole Ormont · Not live yet</div>
+<div class="pv"><b>Free preview</b> built for Charlie&#x27;s Angels Dog Walking by Cole Ormont · Not live yet<a href="#claim">Make it yours ↓</a></div>
 <header><div class="wrap">
 <a class="logo" href="#top"><span class="mark">CS</span><span><b>Charlie&#x27;s Angels Dog Walking</b><small>Dog walking · Plymouth, MA</small></span></a>
 <nav><a href="#services">Services</a><a href="#how">How it works</a><a href="#area">Service area</a><a href="#faq">FAQ</a></nav>
@@ -105,57 +133,66 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 
 <div class="hero" id="top">
 <svg class="pattern" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1"><circle cx="100" cy="100" r="10"/><circle cx="100" cy="100" r="19"/><circle cx="100" cy="100" r="28"/><circle cx="100" cy="100" r="37"/><circle cx="100" cy="100" r="46"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="73"/><circle cx="100" cy="100" r="82"/><circle cx="100" cy="100" r="91"/></svg>
-<div class="wrap">
+<div class="wrap"><div class="hgrid"><div>
 <span class="badge">Serving Plymouth and nearby towns</span>
-<h1>Happy Dogs Start With <span>a Good Walk</span></h1>
-<p class="lead">Charlie&#x27;s Angels Dog Walking gives dogs in Plymouth, MA the exercise and attention they need during the day. Your dog gets out, gets moving, and comes home calm.</p>
+<h1>Happy walks for <span>Plymouth dogs</span></h1>
+<p class="lead">Charlie&#x27;s Angels Dog Walking gives dogs in Plymouth, MA a break from the day. Your dog gets outside, stretches out, and comes home ready to rest.</p>
 <div class="ctas"><a class="btn" href="#quote">Get a free quote</a><a class="btn ghost" href="tel:+15083606514">Call 508-360-6514</a></div>
-</div></div>
+</div>
+<div class="hcard"><h3>Free estimate</h3><p>Tell us about the job and get a straight price, usually same day.</p><a class="p" href="#quote">Request a quote</a><a class="s" href="sms:+15083606514">Text 508-360-6514</a></div>
+</div></div></div>
 
 <div class="trust"><div class="wrap"><div><b>Free quotes</b><span>no pressure, no obligation</span></div><div><b>Local to Plymouth</b><span>close by, quick to respond</span></div><div><b>Talk to the owner</b><span>a real person picks up</span></div><div><b>Easy to book</b><span>call, text or send a request</span></div></div></div>
 
 <section id="services"><div class="wrap">
 <div class="eyebrow">What we do</div>
-<h2>Dog Walking Services</h2>
-<p class="intro">Here is what you can ask for when you book a walk in Plymouth.</p>
-<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13c-3 0-5 3-5 5s2 2 5 2 5 0 5-2-2-5-5-5zM6 10a1.5 2 0 1 0 0-.01M18 10a1.5 2 0 1 0 0-.01M9.5 6a1.5 2 0 1 0 0-.01M14.5 6a1.5 2 0 1 0 0-.01"/></svg></div><h3>Daily Dog Walks</h3><p>A regular walk breaks up your dog&#x27;s day and burns off energy.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Midday Potty Breaks</h3><p>A quick visit gives your dog a chance to go outside while you are at work.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg></div><h3>Recurring Schedules</h3><p>Pick the days and times that fit your week and keep them steady.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>One-Time Walks</h3><p>Need cover for a busy day or a late night? Book a single walk.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12z"/></svg></div><h3>Fresh Water and Check-In</h3><p>Your dog gets a drink and a look-over before you get home.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 6l16 12M20 6L4 18"/></svg></div><h3>Outdoor Time in Any Season</h3><p>Walks fit the weather, from sunny days on the trails to cold winter mornings.</p></div></div>
+<h2>Dog walking services</h2>
+<p class="intro">Pick the kind of walk that fits your dog and your schedule.</p>
+<div class="grid"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13c-3 0-5 3-5 5s2 2 5 2 5 0 5-2-2-5-5-5zM6 10a1.5 2 0 1 0 0-.01M18 10a1.5 2 0 1 0 0-.01M9.5 6a1.5 2 0 1 0 0-.01M14.5 6a1.5 2 0 1 0 0-.01"/></svg></div><h3>Daily dog walks</h3><p>A regular walk to burn off energy and keep your dog on a steady routine.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Midday potty breaks</h3><p>A mid-day visit for dogs who shouldn&#x27;t wait until you get home from work.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><h3>Puppy visits</h3><p>Short, frequent outings that help young dogs with potty training and energy.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14zM5 19l7-7"/></svg></div><h3>Senior dog strolls</h3><p>Gentle, easy-paced walks for older dogs who still love to get outside.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg></div><h3>Recurring schedules</h3><p>Set days and times that repeat each week, so you don&#x27;t have to rebook.</p></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Walks on request</h3><p>Need a walk on a busy or unusual day? Ask and we&#x27;ll see what fits.</p></div></div>
 </div></section>
+
 
 <section class="band" id="how"><div class="wrap">
 <div class="eyebrow">How it works</div>
 <h2>Booking takes a minute.</h2>
 <p class="intro">No runaround. You talk to the owner, get a straight price, and we show up when we said we would.</p>
-<div class="steps"><div class="step"><h3>Tell Us About Your Dog</h3><p>Share your dog&#x27;s name, habits, and what your day looks like.</p></div><div class="step"><h3>Set Up Your Schedule</h3><p>Choose the walk times and days that work for you.</p></div><div class="step"><h3>Enjoy a Tired Dog</h3><p>Your dog gets its walk and you come home to a relaxed pet.</p></div></div>
+<div class="steps"><div class="step"><h3>Ask for a quote</h3><p>Tell us about your dog and what schedule you have in mind.</p></div><div class="step"><h3>Plan the walks</h3><p>We go over your dog&#x27;s habits, needs, and the days that work for you.</p></div><div class="step"><h3>Walks begin</h3><p>Your dog gets out, gets moving, and you get a more relaxed day.</p></div></div>
 </div></section>
 
 <section id="area"><div class="wrap split">
 <div>
 <div class="eyebrow">Service area</div>
 <h2>Local to Plymouth.</h2>
-<p class="intro" style="margin-bottom:18px">We walk dogs in Plymouth and the towns close by.</p>
-<div class="areas"><span>Plymouth</span><span>Kingston</span><span>Duxbury</span><span>Carver</span><span>Wareham</span><span>Bourne</span><span>Marshfield</span><span>Pembroke</span></div>
-<ul class="why"><li>You deal directly with the people walking your dog.</li><li>Local walkers know the neighborhoods and nearby paths.</li><li>Schedules can fit your dog&#x27;s routine, not the other way around.</li><li>Questions get a real answer from a real person.</li></ul>
+<p class="intro" style="margin-bottom:18px">We walk dogs in Plymouth and in several nearby South Shore and Cape-area towns.</p>
+<div class="areas"><span>Plymouth</span><span>Kingston</span><span>Duxbury</span><span>Carver</span><span>Wareham</span><span>Bourne</span><span>Plympton</span><span>Pembroke</span></div>
+<ul class="why"><li>Local to Plymouth and the surrounding towns</li><li>You deal directly with the people walking your dog</li><li>Walk times planned around your schedule</li><li>Free quote before you commit to anything</li></ul>
 </div>
 <div class="rev"><div class="big" style="font-size:52px">Free quotes</div><p style="margin-top:12px">Tell us what you need and get a straight price.</p><a href="#quote">Get a quote</a></div>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap split">
 <div><div class="eyebrow">Questions</div><h2>Good to know.</h2><p class="intro">Don't see your question? Call or text 508-360-6514.</p></div>
-<div class="faq"><details><summary>How much does a dog walk cost?</summary><p>It depends on the dog and the schedule. Ask for a free quote and we will go over the options.</p></details><details><summary>Do I need to book a regular schedule?</summary><p>No. You can set up recurring walks or ask for a one-time visit. Just tell us what you need.</p></details><details><summary>Which towns do you serve?</summary><p>We are based in Plymouth, MA and walk dogs in nearby towns too. Ask us if your town is not listed.</p></details><details><summary>Can I tell you about my dog&#x27;s habits?</summary><p>Yes. Share anything that helps, like pulling on the leash, nervous moments, or favorite spots. That helps the walk go smoothly.</p></details></div>
+<div class="faq"><details><summary>How much does dog walking cost?</summary><p>It depends on your dog, the schedule, and how often you need walks. Ask for a free quote.</p></details><details><summary>Which towns do you serve?</summary><p>We serve Plymouth and nearby towns such as Kingston, Duxbury, Carver, and Wareham. Ask us if your town isn&#x27;t listed.</p></details><details><summary>Can you walk a puppy or an older dog?</summary><p>Yes, tell us about your dog&#x27;s age and needs. We&#x27;ll plan walks that fit them.</p></details><details><summary>How do I get started?</summary><p>Send us a request with a few details about your dog. We&#x27;ll follow up with a free quote.</p></details></div>
 </div></section>
 
 <section id="quote" style="padding-top:0"><div class="wrap"><div class="quote">
-<div><div class="eyebrow" style="color:var(--soft)">Free quote</div><h2>Book a Walk Today</h2><p class="intro">Send a few details and Charlie&#x27;s Angels Dog Walking will get back to you with a price. Prefer to talk? Call 508-360-6514.</p></div>
+<div><div class="eyebrow" style="color:var(--soft)">Free quote</div><h2>Get your free quote</h2><p class="intro">Send a few details and Charlie&#x27;s Angels Dog Walking will get back to you with a price. Prefer to talk? Call 508-360-6514.</p></div>
 <form onsubmit="return sendQuote(event)">
 <label>Your name<input name="n" required autocomplete="name"></label>
 <label>Address or town<input name="a" required autocomplete="street-address"></label>
-<label>What do you need?<select name="s"><option>Daily Dog Walks</option><option>Midday Potty Breaks</option><option>Recurring Schedules</option><option>One-Time Walks</option><option>Fresh Water and Check-In</option><option>Outdoor Time in Any Season</option><option>Something else</option></select></label>
+<label>What do you need?<select name="s"><option>Daily dog walks</option><option>Midday potty breaks</option><option>Puppy visits</option><option>Senior dog strolls</option><option>Recurring schedules</option><option>Walks on request</option><option>Something else</option></select></label>
 <label>Anything else?<textarea name="m" placeholder="Size of the job, timing, questions"></textarea></label>
 <button type="submit">Text my quote request</button>
 <span class="fine">Opens a text to 508-360-6514 with your details filled in.</span>
 </form>
 </div></div></section>
 
+<section id="claim" class="claim"><div class="wrap"><div class="cl">
+<div><div class="eyebrow" style="color:#f5b83d">For Charlie&#x27;s Angels Dog Walking</div><h2>Like it? It can be live this week.</h2>
+<p>This is a free preview built for your business. Keep it as is or tell Cole what to change. Your domain, your site, you own it.</p>
+<div class="t3"><div><b>$399</b><span>This page, live on your own domain</span></div><div><b>$650</b><span>Full site with your photos and gallery</span></div><div><b>$850+</b><span>Everything plus online booking</span></div></div></div>
+<div class="clb"><a class="go" href="sms:+15088077554?&body=Hi%20Cole%2C%20I%20saw%20the%20preview%20you%20made%20for%20Charlie%27s%20Angels%20Dog%20Walking.%20I%27m%20interested.">Text Cole about this site</a><a href="tel:+15088077554">Call Cole · (508) 807-7554</a><small>Half to start, half when it's live. No contracts.</small></div>
+</div></div></section>
 <footer><div class="wrap"><span><b style="color:var(--ink)">Charlie&#x27;s Angels Dog Walking</b> · Dog walking · Plymouth, MA</span><span><a href="tel:+15083606514">508-360-6514</a></span></div></footer>
 <div class="bar"><a href="tel:+15083606514">Call</a><a class="alt" href="#quote">Free quote</a></div>
 <script>
