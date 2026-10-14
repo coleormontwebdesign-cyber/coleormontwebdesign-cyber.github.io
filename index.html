@@ -180,6 +180,14 @@ footer{padding-block:28px; font-size:14px; color:var(--muted); display:flex; jus
   .top .btn{padding:10px 12px; font-size:14px}
   .hero .ctas .btn{flex:1 1 100%}
 }
+.samples{padding-block:72px}
+.smp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.smp{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;min-width:0}
+.smp img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid var(--rule)}
+.smp-t{font-weight:700;font-size:16px;line-height:1.3}
+.smp-m{color:var(--muted);font-size:14px}
+.smp:hover .smp-t,.smp:focus-visible .smp-t{text-decoration:underline}
+@media (max-width:760px){.smp-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
 </style>
 
 <header class="top">
@@ -256,6 +264,15 @@ footer{padding-block:28px; font-size:14px; color:var(--muted); display:flex; jus
     </div>
   </div>
 </section>
+<section class="samples" id="samples">
+  <div class="wrap">
+    <div class="label">Free sample sites</div>
+    <h2 style="margin-top:14px">Every business I reach out to gets one first.</h2>
+    <p style="margin-top:14px;color:var(--muted);font-size:18px;max-width:52ch">These are real sample sites I built for local businesses, using their own photos and Google reviews. They're previews, so the owners can see exactly what they'd get before paying anything. Tap one to see it.</p>
+    <div class="smp-grid"><a class="smp" href="/alc-inc-lawn-and-landscaping-professionals/" target="_blank" rel="noopener"><img src="/alc-inc-lawn-and-landscaping-professionals/p0.jpg" alt="Sample site for ALC Inc. Lawn and Landscaping Professionals" loading="lazy"><span class="smp-t">ALC Inc. Lawn and Landscaping Professionals</span><span class="smp-m">Lawn and landscaping · Ocala, FL</span></a><a class="smp" href="/superior-pressure-washing/" target="_blank" rel="noopener"><img src="/superior-pressure-washing/p0.jpg" alt="Sample site for Superior Pressure Washing" loading="lazy"><span class="smp-t">Superior Pressure Washing</span><span class="smp-m">Pressure washing · Huntsville, AL</span></a><a class="smp" href="/a-top-notch-tree-service/" target="_blank" rel="noopener"><img src="/a-top-notch-tree-service/p0.jpg" alt="Sample site for A Top Notch Tree Service" loading="lazy"><span class="smp-t">A Top Notch Tree Service</span><span class="smp-m">Tree service · Elizabethtown, KY</span></a><a class="smp" href="/ron-handyman/" target="_blank" rel="noopener"><img src="/ron-handyman/p0.jpg" alt="Sample site for Ron Handyman" loading="lazy"><span class="smp-t">Ron Handyman</span><span class="smp-m">Handyman services · Augusta, GA</span></a><a class="smp" href="/steamforce-restorative-cleaning-solutions/" target="_blank" rel="noopener"><img src="/steamforce-restorative-cleaning-solutions/p0.jpg" alt="Sample site for SteamForce Restorative Cleaning Solutions" loading="lazy"><span class="smp-t">SteamForce Restorative Cleaning Solutions</span><span class="smp-m">Cleaning services · Ocala, FL</span></a><a class="smp" href="/cut-em-straight-landscape/" target="_blank" rel="noopener"><img src="/cut-em-straight-landscape/p0.jpg" alt="Sample site for Cut em straight landscape" loading="lazy"><span class="smp-t">Cut em straight landscape</span><span class="smp-m">Landscaping · Enterprise, AL</span></a></div>
+  </div>
+</section>
+
 
 <main class="wrap">
   <section id="price">
