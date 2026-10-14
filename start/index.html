@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get started · Ormont Web Design</title>
+<meta name="description" content="Pick your package, pay the deposit, send your photos. Your site goes live within a week.">
+<meta property="og:title" content="Get your website started · Ormont Web Design">
+<meta property="og:description" content="Pick a package, pay half to start, send your photos. Live within a week.">
+<meta property="og:image" content="https://ormontwebdesign.com/start/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600;700&display=swap">
+<style>
+:root{--paper:#f6f6f2;--sheet:#fff;--ink:#191b1f;--muted:#5c6068;--rule:#dcdcd4;--pen:#2442c9;--pen-ink:#fff;--hi:#fff0a6}
+@media (prefers-color-scheme:dark){:root{--paper:#121317;--sheet:#1a1c21;--ink:#ecedef;--muted:#a2a6ae;--rule:#2c2f36;--pen:#7d95ff;--pen-ink:#0d0f14;--hi:#5a5320;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 'Figtree','Segoe UI',Helvetica,Arial,sans-serif;padding-inline:16px}
+main{max-width:860px;margin:0 auto;padding-block:40px 72px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Arial,sans-serif;letter-spacing:-.02em;line-height:1.1;margin:0}
+h1{font-size:clamp(32px,6vw,48px);margin-bottom:10px}
+h2{font-size:24px;margin:44px 0 14px}
+.muted{color:var(--muted)}a{color:var(--pen)}
+.back{display:inline-block;margin-bottom:26px;font-weight:600;text-decoration:none}
+.lede{font-size:19px;max-width:620px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.plan{background:var(--sheet);border:1px solid var(--rule);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.plan.pick{border:2px solid var(--pen)}
+.tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--hi);padding:3px 8px;border-radius:6px}
+.price{font-family:'Bricolage Grotesque',Arial,sans-serif;font-size:34px;font-weight:800}
+.price s{font-size:20px;color:var(--muted);font-weight:700;margin-left:6px}
+.plan ul{margin:0;padding-left:18px;color:var(--ink);font-size:15.5px}
+.plan .split{font-size:14.5px;color:var(--muted)}
+.btn{margin-top:auto;display:block;text-align:center;background:var(--pen);color:var(--pen-ink);font-weight:700;text-decoration:none;padding:13px 16px;border-radius:10px}
+.btn.alt{background:transparent;color:var(--pen);border:1.5px solid var(--pen)}
+.steps{counter-reset:s;display:grid;gap:12px;padding:0;margin:0;list-style:none}
+.steps li{background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:16px 18px 16px 58px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:15px;width:28px;height:28px;border-radius:50%;background:var(--pen);color:var(--pen-ink);font-weight:800;display:grid;place-items:center;font-size:15px}
+.need{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;padding:0;list-style:none}
+.need li{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:12px 14px;font-size:15.5px}
+.contact{background:var(--sheet);border:1px solid var(--rule);border-radius:14px;padding:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.contact .btns{display:flex;gap:10px;flex-wrap:wrap}
+footer{border-top:1px solid var(--rule);margin-top:48px;padding-top:18px;font-size:15px;color:var(--muted)}
+</style></head><body><main>
+<a class="back" href="/">← Ormont Web Design</a>
+<h1>Let's get your site live.</h1>
+<p class="lede muted">You've seen your free sample. Here's how it becomes your real website: pick a package, pay half to start, send your photos. Most sites are live within a week.</p>
+
+<h2>1. Pick your package</h2>
+<div class="plans">
+  <div class="plan">
+    <h3>Starter</h3>
+    <div class="price">$399</div>
+    <ul><li>One-page site like your sample</li><li>Your reviews, services and contact info</li><li>Works great on phones</li><li>One round of changes</li></ul>
+    <div class="split">$199 to start · $200 when it's live</div>
+    <a class="btn alt" href="https://buy.stripe.com/fZu00igrb0Eo7ULbrw1ZS01">Start with Starter</a>
+  </div>
+  <div class="plan pick">
+    <span class="tag">Most pick this</span>
+    <h3>Standard</h3>
+    <div class="price">$650<s>$750</s></div>
+    <ul><li>Full site with your own photos</li><li>Project gallery and Google reviews</li><li>Google Business Profile help</li><li>Two rounds of changes</li></ul>
+    <div class="split">$325 to start · $325 when it's live</div>
+    <a class="btn" href="https://buy.stripe.com/9B600i7UF9aU2Ar0MS1ZS00">Start with Standard</a>
+  </div>
+  <div class="plan">
+    <h3>Pro</h3>
+    <div class="price">$850+</div>
+    <ul><li>Everything in Standard</li><li>Online booking or quote requests</li><li>Extra pages and features we agree on</li></ul>
+    <div class="split">Half to start · half when it's live</div>
+    <a class="btn alt" href="sms:+15088077554?&body=Hi%20Cole%2C%20I%27m%20interested%20in%20the%20Pro%20website.">Text me about Pro</a>
+  </div>
+</div>
+<p class="muted" style="font-size:15px;margin-top:12px">Payments go through Stripe. Your domain (about $12 a year) is registered in your name. Optional care plan: $49 a month for hosting, updates and small changes, cancel anytime.</p>
+
+<h2>2. Send me your stuff</h2>
+<p>Text or email whatever you have. Phone photos are perfect.</p>
+<ul class="need">
+  <li><b>Photos</b> of your work, before and afters, your truck or team</li>
+  <li><b>Services</b> you offer and any you want to push</li>
+  <li><b>Towns</b> you cover</li>
+  <li><b>Hours</b> and the best number for customers</li>
+  <li><b>Logo</b> if you have one (not required)</li>
+  <li><b>Domain</b> you'd like, if you have one in mind</li>
+</ul>
+
+<h2>3. Review, then go live</h2>
+<ol class="steps">
+  <li><b>I build it</b> with your photos and details, usually within a few days.</li>
+  <li><b>You review it</b> on your phone and send any changes.</li>
+  <li><b>We go live</b> on your own domain. You pay the second half once it's up.</li>
+</ol>
+
+<h2>Questions?</h2>
+<div class="contact">
+  <div><b>Cole Ormont</b><br><span class="muted">Ormont Web Design · Plymouth, MA</span></div>
+  <div class="btns">
+    <a class="btn" href="sms:+15088077554">Text (508) 807-7554</a>
+    <a class="btn alt" href="mailto:coleormontwebdesign@gmail.com">Email me</a>
+  </div>
+</div>
+<p class="muted" style="font-size:15px;margin-top:16px">The full details are on the <a href="/terms/">terms page</a>.</p>
+<footer>Ormont Web Design · Plymouth, Massachusetts · <a href="/terms/">Terms</a></footer>
+</main></body></html>
