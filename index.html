@@ -327,6 +327,28 @@ footer{padding-block:28px; font-size:14px; color:var(--muted); display:flex; jus
     </div>
   </section>
 
+  <section id="compare" style="padding-top:0">
+    <div class="label">Compared</div>
+    <h2 style="margin-top:14px">How this stacks up.</h2>
+    <style>
+      .cmp{width:100%;border-collapse:collapse;margin-top:24px;font-size:15px}
+      .cmp th,.cmp td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+      .cmp th{font:600 13px var(--body);color:var(--muted)}
+      .cmp td:first-child{color:var(--muted);width:24%}
+      .cmp .me{background:var(--hi);color:var(--hi-ink);font-weight:600}
+      .cmpwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+      @media (max-width:640px){.cmp{font-size:13.5px;min-width:560px}}
+    </style>
+    <div class="cmpwrap"><table class="cmp">
+      <tr><th></th><th>Agency</th><th>Build it yourself</th><th>Freelance site</th><th class="me">Ormont Web Design</th></tr>
+      <tr><td>Price</td><td>$2,000 to $5,000</td><td>$20 to $40 a month, forever</td><td>$100 to $500</td><td class="me">From $399, one time</td></tr>
+      <tr><td>See it before you pay</td><td>No</td><td>You build it</td><td>No</td><td class="me">Yes, it's already built</td></tr>
+      <tr><td>Who does the work</td><td>A team you never meet</td><td>You, at night</td><td>Someone you message through an app</td><td class="me">Me, start to finish</td></tr>
+      <tr><td>Time to go live</td><td>4 to 8 weeks</td><td>Whenever you get to it</td><td>1 to 3 weeks</td><td class="me">About a week</td></tr>
+      <tr><td>Changes later</td><td>Billed by the hour</td><td>Do them yourself</td><td>New order</td><td class="me">Text me</td></tr>
+    </table></div>
+  </section>
+
   <section style="padding-top:0">
     <div class="about">
       <img class="me" src="/cole.jpg" alt="Cole Ormont" width="160" height="160">
