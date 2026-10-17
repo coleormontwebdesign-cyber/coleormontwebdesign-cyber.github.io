@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Shawn Murphy Painting · Painting in Plymouth</title>
+<meta name="description" content="Shawn Murphy Painting brings careful, clean paint work to Plymouth, MA. Tell us what you want painted and get a free quote.">
+<meta property="og:title" content="Shawn Murphy Painting">
+<meta property="og:description" content="Fresh paint for Plymouth homes and buildings">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ormontwebdesign.com/shawn-murphy-painting/">
+<meta property="og:image" content="https://ormontwebdesign.com/shawn-murphy-painting/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:site_name" content="Ormont Web Design">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6e3018">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14171b;--muted:#5a616b;--line:#e3e5e2;--paper:#f7f8f6;--white:#fff;--brand:#b5532c;--deep:#6e3018;--soft:#ffd2ad;--gold:#ffc94d;--head:'DM Serif Display',Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.02;letter-spacing:-.015em;font-weight:700}
+
+/* preview strip (removed when the site goes live) */
+.pv{background:var(--ink);color:#c9ccd1;font-size:13.5px;text-align:center;padding:9px 16px}
+.pv b{color:#fff}.pv a{color:var(--gold);font-weight:700;text-decoration:none;margin-left:8px;white-space:nowrap}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.mark{width:40px;height:40px;border-radius:50%;background:var(--deep);color:#fff;display:grid;place-items:center;font:700 16px/1 var(--head);flex:none}
+.logo b{display:block;font-size:16.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav{display:flex;gap:28px;font-size:15px;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.call{background:var(--deep);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:999px;white-space:nowrap}
+
+/* hero: their own work, full bleed, with the rating seal as the one loud thing */
+.hero{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;color:#fff;background:var(--deep) center/cover no-repeat;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,14,.15) 0%,rgba(8,10,14,.35) 40%,rgba(8,10,14,.86) 100%)}
+.hero:not(.photo){background:radial-gradient(1100px 600px at 80% 0%,color-mix(in srgb,var(--brand) 70%,transparent),transparent 65%),var(--deep)}
+.hero:not(.photo):after{background:none}
+.hero svg.pattern{position:absolute;right:-120px;top:-120px;width:640px;opacity:.13}
+.hero.photo svg.pattern{display:none}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-top:120px;padding-bottom:64px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.hero h1{font-size:clamp(44px,7.4vw,96px);max-width:13ch;text-wrap:balance}
+.hero p.lead{font-size:clamp(17.5px,1.9vw,21px);max-width:52ch;color:rgba(255,255,255,.88);margin:22px 0 30px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;padding:16px 26px;border-radius:999px;font-size:16.5px}
+.btn.ghost{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.seal{width:200px;height:200px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-content:center;text-align:center;gap:2px;box-shadow:0 24px 60px -18px rgba(0,0,0,.6);position:relative;transform:rotate(-6deg)}
+.seal:before{content:"";position:absolute;inset:8px;border-radius:50%;border:1.5px dashed color-mix(in srgb,var(--brand) 55%,#fff)}
+.seal b{font:700 58px/1 var(--head)}
+.seal .stars{color:#f2b100;font-size:19px;letter-spacing:2px}
+.seal small{font-size:13px;font-weight:600;color:var(--muted);max-width:13ch;margin:2px auto 0;line-height:1.3}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1,.hero p.lead,.hero .ctas{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero p.lead{animation-delay:.08s}.hero .ctas{animation-delay:.16s}
+  .seal{animation:stamp .7s cubic-bezier(.2,1.4,.4,1) .35s both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @keyframes stamp{from{opacity:0;transform:rotate(-24deg) scale(1.25)}to{opacity:1;transform:rotate(-6deg) scale(1)}}
+}
+
+/* quick facts under the hero */
+.facts{background:var(--white);border-bottom:1px solid var(--line)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.facts .wrap>div{padding:22px 20px 22px 0}
+.facts b{display:block;font-size:16px}.facts span{color:var(--muted);font-size:14.5px}
+
+section{padding:96px 0}
+h2{font-size:clamp(34px,4.6vw,56px);max-width:18ch;text-wrap:balance}
+.intro{color:var(--muted);max-width:56ch;margin:16px 0 0;font-size:18px}
+
+/* services: a list, not a pile of cards */
+.svc-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.svc-wrap .head{position:sticky;top:100px}
+.list{border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
+.svc .ic{width:44px;height:44px;border-radius:50%;background:color-mix(in srgb,var(--brand) 13%,#fff);color:var(--deep);display:grid;place-items:center}
+.svc h3{font-family:'Instrument Sans',sans-serif;font-size:20px;letter-spacing:0;margin:2px 0 4px}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+
+/* gallery: layout adapts to how many photos there are */
+#work{background:var(--white)}
+.gal{display:grid;gap:12px;margin-top:40px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:6px;background:var(--line);cursor:zoom-in}
+.gal.n1{grid-template-columns:1fr}.gal.n1 img{aspect-ratio:16/8}
+.gal.n2{grid-template-columns:1fr 1fr}.gal.n2 img{aspect-ratio:4/3}
+.gal.n3{grid-template-columns:2fr 1fr;grid-template-rows:240px 240px}.gal.n3 img:first-child{grid-row:span 2}
+.gal.n4{grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px}.gal.n4 img:first-child{grid-row:span 2}.gal.n4 img:last-child{grid-column:span 2}
+.gal.n5{grid-template-columns:repeat(4,1fr);grid-auto-rows:220px}.gal.n5 img:first-child{grid-column:span 2;grid-row:span 2}
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1100px,94vw)}
+dialog.lb::backdrop{background:rgba(8,10,14,.88)}
+dialog.lb img{max-height:86vh;width:auto;border-radius:6px}
+dialog.lb button{position:fixed;top:16px;right:18px;background:#fff;border:0;border-radius:999px;width:44px;height:44px;font-size:22px;cursor:pointer}
+
+/* how it works: a real sequence, so it's numbered */
+.band{background:var(--deep);color:#fff}
+.band .intro{color:rgba(255,255,255,.75)}
+.steps{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;counter-reset:s}
+.step{counter-increment:s}
+.step:before{content:counter(s);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--soft);color:var(--deep);font:700 19px/1 var(--head);margin-bottom:18px}
+.step h3{font-family:'Instrument Sans',sans-serif;font-size:21px;letter-spacing:0;margin-bottom:6px}
+.step p{margin:0;color:rgba(255,255,255,.75)}
+
+/* service area + reviews */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.areas span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:15px;font-weight:500}
+.why{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
+.why li{display:flex;gap:12px;align-items:flex-start}
+.why li:before{content:"";flex:none;width:22px;height:22px;margin-top:3px;border-radius:50%;background:var(--deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/13px no-repeat}
+.rev{background:var(--white);border:1px solid var(--line);border-radius:28px;padding:44px 36px;text-align:center}
+.rev .big{font:700 96px/1 var(--head);color:var(--ink)}
+.rev .stars{color:#f2b100;font-size:30px;letter-spacing:3px;display:block;margin:10px 0 6px}
+.rev p{color:var(--muted);margin:0 0 26px;font-size:17px}
+.rev a{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:13px 22px;text-decoration:none;font-weight:600;font-size:15px}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{font-weight:600;font-size:18px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--deep);font-size:24px;line-height:1;transition:transform .2s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq p{color:var(--muted);margin:12px 0 0;max-width:60ch}
+
+/* quote */
+.quote{background:var(--ink);color:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.quote h2{color:#fff}.quote .intro{color:rgba(255,255,255,.75)}
+form{display:grid;gap:14px}
+label{font-size:14px;font-weight:600;color:rgba(255,255,255,.85)}
+input,select,textarea{width:100%;margin-top:6px;font:inherit;font-size:16px;padding:14px 15px;border-radius:12px;border:0;background:#fff;color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+form button{background:var(--soft);color:var(--ink);border:0;border-radius:999px;padding:17px;font:700 17px 'Instrument Sans',sans-serif;cursor:pointer}
+.fine{font-size:13.5px;color:rgba(255,255,255,.6)}
+
+/* claim (removed when the site goes live) */
+.claim{background:#0f1114;color:#e9eaec;padding:80px 0}
+.claim h2{color:#fff;margin:0 0 14px}.claim p{color:#b7bac0;max-width:52ch;margin:0}
+.claim .for{color:var(--gold);font-weight:700;margin-bottom:12px}
+.cl{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.t3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.t3 div{border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:16px}
+.t3 b{display:block;font-size:26px;color:#fff}.t3 span{font-size:13.5px;color:#b7bac0;line-height:1.35;display:block;margin-top:4px}
+.clb{display:grid;gap:10px}
+.clb a{display:block;text-align:center;padding:17px;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.28);color:#fff}
+.clb a.go{background:var(--gold);color:#16140c;border-color:var(--gold)}
+.clb small{color:#8f939a;text-align:center;font-size:13.5px}
+
+footer{padding:44px 0 100px;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:28px}
+.bar{position:fixed;left:0;right:0;bottom:0;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line);z-index:30}
+.bar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:15px;border-radius:999px;background:var(--deep);color:#fff}
+.bar a.alt{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+
+@media (max-width:960px){
+  nav{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .seal{width:150px;height:150px;order:-1;justify-self:start}.seal b{font-size:44px}.seal .stars{font-size:15px}.seal small{font-size:11.5px}
+  .svc-wrap,.split,.quote,.cl{grid-template-columns:1fr;gap:40px}
+  .svc-wrap .head{position:static}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .gal.n3,.gal.n4{grid-template-rows:180px 180px}
+  .gal.n5{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+}
+@media (max-width:600px){
+  body{font-size:16.5px}
+  .hero{min-height:auto}
+  .hero .wrap{padding-top:64px;padding-bottom:44px}
+  section{padding:68px 0}
+  .call{display:none}.bar{display:flex}
+  .quote{padding:32px 22px;border-radius:24px}
+  .gal.n2,.gal.n3,.gal.n4{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:150px}
+  .gal.n3 img:first-child,.gal.n4 img:first-child{grid-row:auto;grid-column:span 2}
+  .gal.n4 img:last-child{grid-column:auto}
+  .t3 b{font-size:21px}
+  .claim{padding:60px 0 120px}
+}
+@media (max-width:640px){.hero.photo:after{background:linear-gradient(180deg,rgba(8,10,14,.25) 0%,rgba(8,10,14,.62) 38%,rgba(8,10,14,.9) 100%)}}
+.hero.photo h1{text-shadow:0 2px 24px rgba(0,0,0,.35)}
+</style>
+</head>
+<body>
+<div class="pv"><b>Free preview</b> built for Shawn Murphy Painting by Cole Ormont, not live yet.<a href="#claim">Make it yours</a></div>
+<header><div class="wrap">
+<a class="logo" href="#top"><span class="mark">SM</span><b>Shawn Murphy Painting</b></a>
+<nav><a href="#services">Services</a><a href="#work">Our work</a><a href="#area">Service area</a><a href="#faq">FAQ</a></nav>
+<a class="call" href="tel:+17742835517">Call 774-283-5517</a>
+</div></header>
+
+<div class="hero" id="top">
+<svg class="pattern" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1"><circle cx="100" cy="100" r="10"/><circle cx="100" cy="100" r="19"/><circle cx="100" cy="100" r="28"/><circle cx="100" cy="100" r="37"/><circle cx="100" cy="100" r="46"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="73"/><circle cx="100" cy="100" r="82"/><circle cx="100" cy="100" r="91"/></svg>
+<div class="wrap">
+<div>
+<h1>Fresh paint for Plymouth homes and buildings</h1>
+<p class="lead">Shawn Murphy Painting brings careful, clean paint work to Plymouth, MA. Tell us what you want painted and get a free quote.</p>
+<div class="ctas"><a class="btn" href="#quote">Get a free quote</a><a class="btn ghost" href="tel:+17742835517">Call 774-283-5517</a></div>
+</div>
+<div class="seal"><b>Free</b><small>quotes, fast and straight</small></div>
+</div></div>
+
+<div class="facts"><div class="wrap"><div><b>Free quotes</b><span>no pressure, no obligation</span></div><div><b>Local to Plymouth</b><span>close by, quick to respond</span></div><div><b>Talk to the owner</b><span>a real person picks up</span></div><div><b>Easy to book</b><span>call, text or send a request</span></div></div></div>
+
+<section id="services"><div class="wrap svc-wrap">
+<div class="head"><h2>Painting services we offer</h2><p class="intro">From a single room to the outside of a building, here is what the work can include.</p></div>
+<div class="list"><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-8 8H6v-6zM4 20l2-2"/></svg></div><div><h3>Interior painting</h3><p>Walls and ceilings get a smooth, even finish that freshens up your rooms.</p></div></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><div><h3>Exterior painting</h3><p>New paint helps protect outside surfaces and improves how the property looks.</p></div></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><h3>Trim and doors</h3><p>Crisp lines on trim, doors and detail work make the whole job look finished.</p></div></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><div><h3>Surface prep</h3><p>Cleaning, scraping and sanding give the new paint a solid surface to hold onto.</p></div></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><div><h3>Patch and repair prep</h3><p>Small cracks and nail holes get filled and smoothed before any paint goes on.</p></div></div><div class="svc"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></svg></div><div><h3>Scheduled projects</h3><p>Plan your painting around your calendar so the work fits your routine.</p></div></div></div>
+</div></section>
+
+
+
+<section class="band" id="how"><div class="wrap">
+<h2>Booking takes a minute.</h2>
+<p class="intro">You talk to the owner, get a straight price, and we show up when we said we would.</p>
+<ol class="steps"><li class="step"><h3>Ask for a quote</h3><p>Send a message with what you want painted and where it is.</p></li><li class="step"><h3>Review the plan</h3><p>Go over the scope, the timing and the price before work begins.</p></li><li class="step"><h3>Enjoy the finish</h3><p>The work gets done and the space is left tidy.</p></li></ol>
+</div></section>
+
+<section id="area"><div class="wrap split">
+<div>
+<h2>Local to Plymouth.</h2>
+<p class="intro">Shawn Murphy Painting is based in Plymouth and serves nearby South Shore towns.</p>
+<div class="areas"><span>Plymouth</span><span>Kingston</span><span>Duxbury</span><span>Carver</span><span>Plympton</span><span>Pembroke</span><span>Marshfield</span><span>Wareham</span></div>
+<ul class="why"><li>Local to Plymouth and the surrounding area</li><li>Simple, direct communication from quote to finish</li><li>Focused on one trade: painting</li><li>Free quotes with no pressure</li></ul>
+</div>
+<div class="rev"><div class="big" style="font-size:52px">Free quotes</div><p style="margin-top:12px">Tell us what you need and get a straight price.</p><a href="#quote">Get a quote</a></div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap split">
+<div><h2>Good to know.</h2><p class="intro">Don't see your question? Call or text 774-283-5517.</p></div>
+<div class="faq"><details><summary>How much does a painting job cost?</summary><p>It depends on the size of the job, the surfaces and the prep involved. Ask for a free quote and you will get a clear number.</p></details><details><summary>Do you paint inside and outside?</summary><p>Interior and exterior painting are both listed services. Send us the details of your project and we will confirm what fits.</p></details><details><summary>Which towns do you serve?</summary><p>We are based in Plymouth, MA and work in nearby towns like Kingston, Duxbury and Carver. Ask if your town is not listed.</p></details><details><summary>How do I get started?</summary><p>Fill out the quote form with a few details about your project. We will get back to you to talk through next steps.</p></details></div>
+</div></section>
+
+<section id="quote" style="padding-top:0"><div class="wrap"><div class="quote">
+<div><h2>Get your free painting quote</h2><p class="intro">Send a few details and Shawn Murphy Painting will get back to you with a price. Prefer to talk? Call 774-283-5517.</p></div>
+<form onsubmit="return sendQuote(event)">
+<label>Your name<input name="n" required autocomplete="name"></label>
+<label>Address or town<input name="a" required autocomplete="street-address"></label>
+<label>What do you need?<select name="s"><option>Interior painting</option><option>Exterior painting</option><option>Trim and doors</option><option>Surface prep</option><option>Patch and repair prep</option><option>Scheduled projects</option><option>Something else</option></select></label>
+<label>Anything else?<textarea name="m" placeholder="Size of the job, timing, questions"></textarea></label>
+<button type="submit">Text my quote request</button>
+<span class="fine">Opens a text to 774-283-5517 with your details filled in.</span>
+</form>
+</div></div></section>
+
+<section id="claim" class="claim"><div class="wrap"><div class="cl">
+<div><p class="for">Built for Shawn Murphy Painting</p><h2>Like it? It can be live this week.</h2>
+<p>This is a free preview of your website. Keep it as is or tell Cole what to change. Your domain, your site, you own it.</p>
+<div class="t3"><div><b>$399</b><span>This page, live on your own domain</span></div><div><b>$650</b><span>Full site with your photos and gallery</span></div><div><b>$850+</b><span>Everything plus online booking</span></div></div></div>
+<div class="clb"><a class="go" href="sms:+17747736010?&body=Hi%20Cole%2C%20I%20saw%20the%20preview%20you%20made%20for%20Shawn%20Murphy%20Painting.%20I%27m%20interested.">Text Cole about this site</a><a href="https://ormontwebdesign.com/start/">See how it works</a><a href="tel:+17747736010">Call Cole at (774) 773-6010</a><small>Half to start, half when it's live. No contracts.</small></div>
+</div></div></section>
+<footer><div class="wrap"><span><b style="color:var(--ink)">Shawn Murphy Painting</b>, Painting in Plymouth, MA</span><span><a href="tel:+17742835517">774-283-5517</a></span></div></footer>
+<div class="bar"><a href="tel:+17742835517">Call now</a><a class="alt" href="#quote">Free quote</a></div>
+<dialog class="lb" id="lb"><button aria-label="Close photo">×</button><img alt=""></dialog>
+<script>
+function sendQuote(e){e.preventDefault();const f=e.target;
+const t="Hi, I'd like a quote. Name: "+f.n.value+". Address: "+f.a.value+". Need: "+f.s.value+(f.m.value?". "+f.m.value:"");
+location.href="sms:+17742835517"+(/iPhone|iPad|Mac/.test(navigator.userAgent)?"&":"?")+"body="+encodeURIComponent(t);return false}
+(function(){const lb=document.getElementById('lb');if(!lb||!lb.showModal)return;const im=lb.querySelector('img');
+document.querySelectorAll('.gal img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;im.alt=i.alt;lb.showModal()}));
+lb.addEventListener('click',()=>lb.close())})();
+</script>
+</body>
+</html>
