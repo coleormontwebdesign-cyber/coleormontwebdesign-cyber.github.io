@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Never Miss a Pump-Out · for septic companies</title>
+<meta name="description" content="Missed-call text-back, customer reminders and Google review requests for septic companies. $97 a month, no contract, set up for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600;700&display=swap">
+<style>
+:root{--paper:#f6f6f2;--ink:#191b1f;--muted:#5c6068;--rule:#dcdcd4;--pen:#2442c9;--hi:#fff0a6;--bub:#e9e9e4;--ok:#1f7a3f}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font:17px/1.55 Figtree,system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:28px 16px 56px}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:15px}
+.top a{color:var(--ink);text-decoration:none;font-weight:700}
+h1{font:800 clamp(38px,7vw,64px)/1.02 'Bricolage Grotesque',sans-serif;margin:28px 0 12px;letter-spacing:-.02em}
+.lede{font-size:19px;color:var(--muted);max-width:34em;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:40px;align-items:start}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.phone{margin:0 auto}}
+.phone{width:100%;max-width:330px;aspect-ratio:9/18.5;background:#111;border-radius:42px;padding:12px;box-shadow:0 18px 40px rgba(25,27,31,.18)}
+.screen{background:#fff;border-radius:32px;height:100%;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.bar{padding:14px 16px 10px;border-bottom:1px solid #eee;text-align:center}
+.bar b{display:block;font-size:15px}.bar span{font-size:12px;color:var(--muted)}
+.msgs{flex:1;padding:14px 12px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.m{max-width:84%;padding:9px 12px;border-radius:18px;font-size:14px;line-height:1.35;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
+.m.show{opacity:1;transform:none}
+.in{background:var(--bub);align-self:flex-start;border-bottom-left-radius:6px}
+.out{background:var(--pen);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
+.sys{align-self:center;background:none;color:var(--muted);font-size:12px;padding:2px}
+.tag{align-self:center;background:var(--hi);font-weight:700;font-size:13px;border-radius:999px;padding:6px 12px}
+.call{position:absolute;inset:0;background:#1d1f24;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:opacity .4s}
+.call.hide{opacity:0;pointer-events:none}
+.call .who{font:700 22px 'Bricolage Grotesque',sans-serif}.call .st{font-size:14px;color:#c9cad0}
+.ring{width:64px;height:64px;border-radius:50%;background:#c0392b;margin-top:28px;display:grid;place-items:center;font-size:26px}
+@media (prefers-reduced-motion:no-preference){.ring.go{animation:p 1s infinite}@keyframes p{50%{transform:scale(1.08)}}}
+.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;padding:0 0 22px 52px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font:800 17px 'Bricolage Grotesque',sans-serif}
+.steps b{display:block;font-size:18px}
+.steps .now{background:var(--hi)}
+.price{border-top:2px solid var(--ink);margin-top:8px;padding-top:18px}
+.price .big{font:800 30px 'Bricolage Grotesque',sans-serif}
+.cta{display:inline-block;margin-top:16px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px}
+.cta:focus-visible,.replay:focus-visible{outline:3px solid var(--pen);outline-offset:3px}
+.replay{margin-top:14px;background:none;border:2px solid var(--ink);border-radius:10px;padding:8px 14px;font:600 15px Figtree,sans-serif;cursor:pointer}
+.foot{margin-top:40px;font-size:14px;color:var(--muted)}
+</style>
+<style>.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.box{border-top:2px solid var(--ink);padding-top:16px;margin-bottom:24px}.box h2{font:800 24px 'Bricolage Grotesque',sans-serif;margin:0 0 8px}.feat{list-style:none;padding:0;margin:0}.feat li{padding:0 0 18px;border-bottom:1px solid var(--rule);margin-bottom:18px}.feat b{display:block;font-size:19px;margin-bottom:2px}.note{background:var(--hi);padding:12px 16px;border-radius:10px;font-weight:600;margin:18px 0}</style>
+</head><body><div class="wrap">
+<div class="top"><a href="/">Ormont Web Design</a><span>Built for septic companies</span></div>
+<h1>Never miss a<br>pump-out call.</h1>
+<p class="lede">You're in a hole, under a truck, or driving the route when the phone rings. Ormont sets your septic company up so every missed call gets a text back in seconds, and every past customer gets reminded when their tank is due.</p>
+<p><a class="cta" href="/demo/">Watch a 30-second demo</a></p>
+<div class="two">
+ <div><ul class="feat"><li><b>Missed calls get a text in seconds</b>"Hi, this is [your company]. Sorry we missed your call! What can we help with?" The caller writes back instead of calling the next pumper. You get a notification with their number.</li><li><b>"Your tank is due" reminders</b>Hand me your customer list, even if it's on paper or cards. When someone's 3-year pump-out comes up, they get a friendly text to book. No more hand-written reminder cards in winter.</li><li><b>Google review requests</b>After each job, your customer gets one short text asking for a review. More reviews means more calls from people searching "septic pumping near me."</li><li><b>A real website</b>Your services, your towns, your reviews and a call button. If I reached out to you, yours may already be built, free, before we ever talk.</li><li><b>A monthly results text</b>Every month: how many missed calls got a text, how many wrote back, and how many new reviews you got. You always see what you're paying for.</li></ul></div>
+ <div>
+  <div class="box"><h2>$399 setup, then $97 a month</h2>Setup includes your website. No contract: cancel with one text, and the website stays yours. Or $690 up front covers setup plus 3 months.
+   <div class="note">If it doesn't catch at least one missed call in your first 30 days of texting, your next month is free.</div></div>
+  <div class="box"><h2>Why now</h2>Fall is the rush: everyone wants a pump-out before the ground freezes. That's exactly when missed calls cost the most.</div>
+  <div class="box"><h2>Who sets it up</h2>Me, Cole Ormont, out of Plymouth, Massachusetts. I set everything up for you, on a 10-minute video call or in person if you're nearby. You don't learn any software. You deal with me directly, not a call center.</div>
+  <div class="box"><h2>Results</h2>I'm adding real numbers from septic companies here as they come in: missed calls caught, jobs booked, reviews gained. No made-up stats.</div>
+  <p><a class="cta" href="sms:+17747736010">Text Cole: (774) 773-6010</a></p>
+  <p class="foot">Texting turns on once the phone carriers approve your business, usually 1 to 2 weeks; your website goes live first. Reminder and review texts only go to your own customers, and anyone can reply STOP. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p>
+ </div>
+</div>
+</div></body></html>
