@@ -57,9 +57,9 @@ footer a{color:inherit}
 <header class="top"><a class="brand" href="/">Cole Ormont<span>.</span></a><a class="btn" href="sms:+17747736010">Text Cole</a></header>
 <main class="grid">
   <div>
-    <div class="label">Add-on · AI receptionist</div>
+    <div class="label">Front Desk plan · $297/mo · AI receptionist</div>
     <h1>Never miss a customer while you're on a job.</h1>
-    <p class="lede">A receptionist that lives on your website. It answers questions about your prices and service area day or night, then texts you the lead.</p>
+    <p class="lede">An AI receptionist that answers when you can't, on your website and by text. It answers questions about your prices and service area day or night, then texts you the lead.</p>
     <div class="live" style="margin:18px 0 6px;padding:14px 16px;border:1.5px solid var(--pen);border-radius:10px;background:var(--sheet)"><b style="display:block;font-size:17px">Hear it on the phone, live</b><span style="color:var(--muted)">Call <a href="tel:+17747736010" style="color:var(--pen);font-weight:700">(774) 773-6010</a>. When Cole can't pick up, his own AI receptionist answers. Ask it about prices, timing, anything.</span></div>
     <ul class="pts">
       <li><div class="ck">✓</div><div><b>Answers instantly, 24/7</b><span>Customers get a reply at 10pm instead of calling the next company.</span></div></li>
@@ -68,11 +68,11 @@ footer a{color:inherit}
       <li><div class="ck">✓</div><div><b>Hands off when it should</b><span>Anything it isn't sure about goes straight to you, not a guess.</span></div></li>
     </ul>
     <div class="ctas"><a class="btn" href="sms:+17747736010?body=Hey%20Cole%2C%20I%20saw%20the%20AI%20receptionist%20demo.%20Can%20you%20add%20it%20to%20my%20site%3F">Add it to my site</a><a class="btn line" href="tel:+17747736010">Call (774) 773-6010</a></div>
-    <p class="note">This demo uses a made-up lawn company and scripted answers so you can try it out. The real version runs on AI and is set up with your actual business info before it goes live.</p>
+    <p class="note">This demo uses a made-up septic company and scripted answers so you can try it out. The real version runs on AI and is set up with your actual business info before it goes live.</p>
   </div>
   <div>
     <div class="phone"><div class="screen">
-      <div class="bar"><div class="av">MS</div><div><b>Maple Street Lawn Co.</b><small>● Replies instantly</small></div></div>
+      <div class="bar"><div class="av">MS</div><div><b>Cape Septic Co.</b><small>● Replies instantly</small></div></div>
       <div class="msgs" id="msgs" aria-live="polite"></div>
       <div class="chips" id="chips"></div>
       <form id="f"><input id="t" placeholder="Ask anything…" autocomplete="off" aria-label="Message"><button>Send</button></form>
@@ -86,17 +86,17 @@ footer a{color:inherit}
 const msgs=document.getElementById('msgs'),chips=document.getElementById('chips');
 let lead={need:'',town:'',name:'',phone:''},stage='open';
 const A={
- price:"Most weekly mows in town run $45–$65 depending on yard size. Want a free exact quote? I just need your name and a good number.",
+ price:"A standard pump-out runs $350–$550 depending on tank size and access. Want an exact price? I just need your name and a good number.",
  area:"Yep, we cover Plymouth, Kingston, Duxbury, Carver and Plympton. What town are you in?",
- book:"We have openings Thursday morning and Saturday. Want me to hold one and have the owner confirm by text?",
- cleanup:"Fall cleanups usually run $250–$600 depending on leaves and beds. We're booking 1–2 weeks out right now. Want a quote?",
- hours:"Crews are out Mon–Sat, 7am–5pm. I answer messages any time, though.",
+ book:"We have openings Thursday morning and Friday afternoon. Want me to hold one and have the owner confirm by text?",
+ cleanup:"If it's backing up or you smell sewage, that's an emergency and we'll get to you as fast as we can. What's your name and address? I'll get the owner on it right now.",
+ hours:"Trucks are out Mon–Sat, 7am–5pm, and we take emergencies. I answer messages any time.",
  human:"No problem. I'll have the owner text you directly. What's your name and best number?",
  unsure:"Good question. I don't want to guess on that one, so I'll pass it to the owner. What's your name and best number?"
 };
 function route(t){t=t.toLowerCase();
- if(/(price|cost|how much|\$|charge|rate)/.test(t)){lead.need=lead.need||'Weekly mowing quote';return A.price}
- if(/(clean ?up|leaves|leaf|fall)/.test(t)){lead.need='Fall cleanup quote';return A.cleanup}
+ if(/(price|cost|how much|\$|charge|rate)/.test(t)){lead.need=lead.need||'Pump-out quote';return A.price}
+ if(/(back|backing|emergency|smell|overflow|clog|alarm)/.test(t)){lead.need='Backup / emergency';stage='name';return A.cleanup}
  if(/(town|area|service|come to|kingston|duxbury|carver|plymouth|plympton)/.test(t)){const m=t.match(/kingston|duxbury|carver|plymouth|plympton/);if(m){lead.town=m[0][0].toUpperCase()+m[0].slice(1);return `Yes, we're in ${lead.town} every week. Want a free quote or to get on the schedule?`}return A.area}
  if(/(book|schedule|appointment|available|saturday|thursday|when)/.test(t)){lead.need=lead.need||'Wants to book';return A.book}
  if(/(hour|open|close)/.test(t))return A.hours;
@@ -112,11 +112,11 @@ function send(t){t=t.trim();if(!t)return;add(t,'me');setChips([]);
   if(!lead.phone){bot(`Thanks${lead.name!=='Customer'?' '+lead.name:''}! What's the best number to reach you?`);stage='phone';return}
   return finish()}
  if(stage==='phone'){const ph=t.match(/\d[\d\s().-]{8,}\d/);if(!ph){bot("Just need a 10-digit number so the owner can text you.");return}lead.phone=ph[0];return finish()}
- bot(route(t),()=>{if(stage==='open')setChips(['Yes please','Do you do fall cleanups?','Talk to a person'])})}
+ bot(route(t),()=>{if(stage==='open')setChips(['Yes please','My tank is backing up','Talk to a person'])})}
 function finish(){stage='done';bot(`Got it, ${lead.name}. I just sent your info to the owner, and you'll get a text back shortly to confirm. Anything else?`,()=>{
  document.getElementById('alertText').textContent=`New lead from your website: ${lead.name}, ${lead.phone}. ${lead.need||'Question about service'}${lead.town?' in '+lead.town:''}. Reply to them directly.`;
- document.getElementById('alert').classList.add('on');stage='open';setChips(['How much for a mow?','What are your hours?'])})}
+ document.getElementById('alert').classList.add('on');stage='open';setChips(['How much for a pump-out?','What are your hours?'])})}
 document.getElementById('f').onsubmit=e=>{e.preventDefault();const i=document.getElementById('t');send(i.value);i.value=''};
-setTimeout(()=>bot("Hi! I'm the Maple Street Lawn assistant. Ask me about prices, service areas or booking. I reply right away, any time.",()=>setChips(['How much for a mow?','Do you come to Kingston?','Can I book Saturday?'])),400);
+setTimeout(()=>bot("Hi! I'm the Cape Septic Co. assistant. Ask me about prices, service areas or booking. I reply right away, any time.",()=>setChips(['How much for a pump-out?','My tank is backing up','Do you come to Kingston?'])),400);
 </script>
 </body></html>
