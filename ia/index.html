@@ -1,0 +1,61 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>I/A Tracker Demo · Ormont Web Design</title><meta name="robots" content="noindex">
+<style>
+:root{--ink:#111;--y:#ffd400;--r:#c62828;--g:#2e7d32;--m:#555}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.45}
+header{background:var(--ink);color:var(--y);padding:20px 16px}header h1{margin:0;font-size:26px}header p{color:#fff;margin:6px 0 0;max-width:760px}
+main{max-width:1000px;margin:0 auto;padding:16px}
+textarea{width:100%;font-family:ui-monospace,Consolas,monospace;font-size:13px;border:3px solid var(--ink);padding:8px}
+button{background:var(--y);border:3px solid var(--ink);font-weight:800;padding:10px 16px;font-size:15px;cursor:pointer;margin:8px 8px 8px 0}
+.cards{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.card{border:3px solid var(--ink);padding:10px 14px;min-width:150px}.card b{font-size:26px;display:block}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}th,td{padding:6px;border-bottom:1px solid #ddd;text-align:left;vertical-align:top}th{background:#f3f3f3}
+.late{color:var(--r);font-weight:700}.soon{color:#b26a00;font-weight:700}.ok{color:var(--g)}
+pre{white-space:pre-wrap;background:#fffbe0;border-left:6px solid var(--y);padding:10px;font-size:14px}
+.m{color:var(--m);font-size:14px}h2{margin:22px 0 6px}
+</style></head><body>
+<header><h1>I/A system tracker (demo)</h1><p>For septic operators who service I/A systems: see every quarterly visit that's due or late, every contract about to lapse, and the texts that book them, in one screen.</p></header>
+<main>
+<p class="m">Paste one system per line: <b>Homeowner, Phone, Town, System type, Contract end (YYYY-MM-DD), Last inspection (YYYY-MM-DD), Visits per year (4 or 1)</b>. Example data below is made up.</p>
+<textarea id="d" rows="9">John Carter, 5085550101, Falmouth, FAST, 2026-12-15, 2026-06-20, 4
+Linda Shaw, 5085550102, Mashpee, Advantex, 2027-03-01, 2026-08-30, 4
+Mike Doran, 7745550103, Barnstable, Singulair, 2026-11-05, 2026-04-02, 4
+Patty Reyes, 5085550104, Orleans, NitROE, 2027-06-30, 2026-09-28, 4
+Steve Hall, 5085550105, Harwich, Amphidrome, 2026-10-30, 2026-07-15, 4
+Kate Moss, 7815550106, Plymouth, FAST, 2027-01-20, 2025-11-10, 1</textarea>
+<div><label class="m">Company name </label><input id="co" value="[Your Company]" style="padding:8px;border:3px solid #111"> <label class="m">Today </label><input id="today" type="date" style="padding:8px;border:3px solid #111"></div>
+<button onclick="run()">Show what's due</button>
+<div class="cards" id="cards"></div>
+<h2>Every system</h2><div class="m">Sorted by what needs you first.</div>
+<table id="t"></table>
+<h2>Texts ready to send</h2><div class="m">Every text ends with an opt-out. Send 8am-8pm only.</div>
+<pre id="msgs"></pre>
+<h2>Monthly summary for the owner</h2><pre id="sum"></pre>
+<p class="m" style="margin-top:24px">Built by Cole Ormont, Ormont Web Design, Plymouth MA · (774) 773-6010 · Want this running for your I/A customers? Text me.</p></main>
+<script>
+const T=document.getElementById('today'); T.valueAsDate=new Date();
+const day=86400000;
+function run(){
+ const today=new Date(T.value+'T12:00:00'); const co=document.getElementById('co').value;
+ const rows=document.getElementById('d').value.trim().split('\n').map(l=>l.split(',').map(x=>x.trim())).filter(r=>r.length>=7);
+ const out=rows.map(([name,ph,town,type,cend,last,vpy])=>{
+  const ce=new Date(cend+'T12:00:00'), li=new Date(last+'T12:00:00'); const iv=365/(+vpy||4);
+  const next=new Date(li.getTime()+iv*day); const dNext=Math.round((next-today)/day); const dCon=Math.round((ce-today)/day);
+  let pri=0,flags=[];
+  if(dNext<0){pri+=3;flags.push(['late','Visit '+(-dNext)+' days late'])} else if(dNext<=30){pri+=2;flags.push(['soon','Visit due in '+dNext+' days'])}
+  if(dCon<0){pri+=4;flags.push(['late','Contract lapsed'])} else if(dCon<=60){pri+=2;flags.push(['soon','Contract ends in '+dCon+' days'])}
+  if(!flags.length)flags.push(['ok','All set']);
+  return {name,ph,town,type,next,dNext,ce,dCon,pri,flags,first:name.split(' ')[0]};
+ }).sort((a,b)=>b.pri-a.pri||a.dNext-b.dNext);
+ const late=out.filter(o=>o.dNext<0).length, soon=out.filter(o=>o.dNext>=0&&o.dNext<=30).length, lapse=out.filter(o=>o.dCon<=60).length;
+ document.getElementById('cards').innerHTML=`<div class="card"><b>${out.length}</b>systems</div><div class="card"><b class="late">${late}</b>visits late</div><div class="card"><b class="soon">${soon}</b>due in 30 days</div><div class="card"><b class="soon">${lapse}</b>contracts ending in 60 days</div>`;
+ const f=d=>d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+ document.getElementById('t').innerHTML='<tr><th>Homeowner</th><th>Town</th><th>System</th><th>Next visit</th><th>Contract ends</th><th>Status</th></tr>'+out.map(o=>`<tr><td>${o.name}<br><span class="m">${o.ph}</span></td><td>${o.town}</td><td>${o.type}</td><td>${f(o.next)}</td><td>${f(o.ce)}</td><td>${o.flags.map(x=>`<div class="${x[0]}">${x[1]}</div>`).join('')}</td></tr>`).join('');
+ const msgs=[];
+ out.forEach(o=>{
+  if(o.dNext<=30) msgs.push(`To ${o.name} (${o.ph}):\nHi ${o.first}, it's ${co}. Your ${o.type} system in ${o.town} is due for its required inspection${o.dNext<0?' (it\\'s a little overdue)':''}. Reply 1 for this week or 2 for next week and we'll get you on the schedule. Reply STOP to opt out.`);
+  if(o.dCon<=60) msgs.push(`To ${o.name} (${o.ph}):\nHi ${o.first}, it's ${co}. Your ${o.type} maintenance contract ${o.dCon<0?'has lapsed':'ends '+f(o.ce)}, and the town requires one to stay active. Reply YES and we'll renew it, same terms. Reply STOP to opt out.`);
+ });
+ document.getElementById('msgs').textContent=msgs.join('\n\n')||'Nothing due right now.';
+ document.getElementById('sum').textContent=`${co}, here's your I/A month:\n- ${out.length} systems tracked\n- ${late} visits overdue, ${soon} coming up in the next 30 days\n- ${lapse} contracts to renew in the next 60 days\nReminder texts are queued for all of them. Reply with any changes.`;
+}
+run();
+</script></body></html>
